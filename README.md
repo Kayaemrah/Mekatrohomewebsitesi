@@ -22,14 +22,14 @@ assets/favicon.svg  Site simgesi
 - **Bölümler:** Hero (animasyonlu akıllı ev görseli) · Hizmetler · Mobil Kontrol ·
   Yazılım & Dijital · Çalışma Süreci · Neden Biz · İletişim formu · Footer
 
-## Yayınlamadan önce güncellenmesi gerekenler
+## İletişim bilgileri
 
-`index.html` içinde aşağıdaki yer tutucuları kendi bilgilerinizle değiştirin:
+Telefon (`+90 540 123 35 36`) ve e-posta (`mekatrohome@gmail.com`) günceldir.
+
+`index.html` içinde hâlâ yer tutucu olanlar:
 
 | Yer tutucu | Nerede |
 |---|---|
-| `+90 500 000 00 00` | İletişim bölümü, footer ve `tel:` / `wa.me` linkleri |
-| `info@mekatrohome.com` | İletişim bölümü, form `action`, footer |
 | `Türkiye` (adres) | İletişim bölümündeki adres kartı |
 | Hero istatistikleri (150+ proje, 10+ yıl) | `data-count` değerleri |
 

@@ -39,10 +39,15 @@ kontrol ederek yapılır; otomatik test yoktur.
   kod penceresi saf CSS. Harici görsel/CDN eklemekten kaçının; site kendi kendine yeterli
   kalmalı (fontlar hariç — Google Fonts: Inter + Space Grotesk).
 
-## Yer tutucular (gerçek bilgiler gelince güncellenecek)
+## İletişim bilgileri ve kalan yer tutucular
 
-- Telefon: `+90 500 000 00 00` (tel:, wa.me linkleri, iletişim ve footer)
-- E-posta: `info@mekatrohome.com` (mailto:, form `action`, footer)
+Gerçek bilgiler (08.07.2026'da güncellendi):
+
+- Telefon: `+90 540 123 35 36` — linklerde `tel:+905401233536` ve `wa.me/905401233536`
+- E-posta: `mekatrohome@gmail.com` (mailto:, form `action`, footer)
+
+Hâlâ yer tutucu olanlar:
+
 - Adres: `Türkiye`
 - Hero istatistikleri: `data-count` değerleri (150 proje, 10 yıl)
 
