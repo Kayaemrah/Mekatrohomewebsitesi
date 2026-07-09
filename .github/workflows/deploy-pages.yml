@@ -26,3 +26,4 @@ jobs:
           publish_dir: .
           exclude_assets: '.github,CLAUDE.md,README.md'
           commit_message: 'Site yayını'
+          cname: mekatrohome.com
