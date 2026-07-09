@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mekatro Home Mühendislik | Akıllı Ev, Bina Otomasyonu ve Yazılım Çözümleri</title>
+  <meta name="description" content="Mekatro Home Mühendislik: KNX akıllı ev sistemleri, bina otomasyonu, güvenlik kamera sistemleri, mobil uygulama ve web sitesi geliştirme. Keşiften devreye almaya uçtan uca mühendislik.">
+  <meta name="keywords" content="akıllı ev, bina otomasyonu, KNX, güvenlik kamerası, mobil uygulama, web sitesi, Mekatro Home">
+  <meta property="og:title" content="Mekatro Home Mühendislik">
+  <meta property="og:description" content="Akıllı ev, bina otomasyonu ve yazılım çözümlerinde uçtan uca mühendislik.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="Mekatro Home ana sayfa">
+        <svg class="logo__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 6L42 21V42H30V30H18V42H6V21L24 6Z" stroke="url(#logoGrad)" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="24" cy="21" r="3" fill="#22d3ee"/>
+          <path d="M24 24V30" stroke="#22d3ee" stroke-width="2"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="6" y1="6" x2="42" y2="42">
+              <stop stop-color="#22d3ee"/><stop offset="1" stop-color="#818cf8"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo__text">MEKATRO<em>HOME</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Ana menü">
+        <a href="#hizmetler" class="nav__link">Hizmetler</a>
+        <a href="#mobil" class="nav__link">Mobil Kontrol</a>
+        <a href="#yazilim" class="nav__link">Yazılım</a>
+        <a href="#surec" class="nav__link">Çalışma Sürecimiz</a>
+        <a href="#neden-biz" class="nav__link">Neden Biz</a>
+        <a href="#iletisim" class="nav__link nav__link--cta">Teklif Alın</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <span class="badge">
+            <span class="badge__dot"></span>
+            KNX Sertifikalı Akıllı Ev &amp; Otomasyon Mühendisliği
+          </span>
+          <h1 class="hero__title">
+            Yaşam alanlarınız<br>
+            <span class="text-gradient">artık daha akıllı.</span>
+          </h1>
+          <p class="hero__desc">
+            Akıllı ev sistemlerinden bina otomasyonuna, güvenlik çözümlerinden size özel
+            mobil uygulama ve web yazılımlarına — keşiften devreye almaya kadar
+            uçtan uca mühendislik hizmeti sunuyoruz.
+          </p>
+          <div class="hero__actions">
+            <a href="#iletisim" class="btn btn--primary">Ücretsiz Keşif Talep Edin</a>
+            <a href="#hizmetler" class="btn btn--ghost">Hizmetlerimizi İnceleyin</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__num" data-count="150">0</span><span class="stat__plus">+</span>
+              <span class="stat__label">Tamamlanan Proje</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="10">0</span><span class="stat__plus">+</span>
+              <span class="stat__label">Yıllık Deneyim</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="100">0</span><span class="stat__plus">%</span>
+              <span class="stat__label">Müşteri Memnuniyeti</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Akıllı ev illüstrasyonu -->
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="smart-house">
+            <svg viewBox="0 0 420 360" fill="none" class="smart-house__svg">
+              <!-- ev gövdesi -->
+              <path d="M210 40L370 160V330H50V160L210 40Z" stroke="rgba(148,163,184,.35)" stroke-width="2" fill="rgba(15,23,42,.6)"/>
+              <path d="M210 40L370 160H50L210 40Z" fill="rgba(34,211,238,.06)" stroke="rgba(34,211,238,.4)" stroke-width="2"/>
+              <!-- kapı ve pencereler -->
+              <rect x="180" y="240" width="60" height="90" rx="4" stroke="rgba(34,211,238,.5)" stroke-width="2" fill="rgba(34,211,238,.08)"/>
+              <rect x="85" y="200" width="55" height="50" rx="4" stroke="rgba(129,140,248,.5)" stroke-width="2" fill="rgba(129,140,248,.1)" class="pulse-soft"/>
+              <rect x="280" y="200" width="55" height="50" rx="4" stroke="rgba(251,191,36,.5)" stroke-width="2" fill="rgba(251,191,36,.08)" class="pulse-soft delay-2"/>
+              <!-- bağlantı hatları -->
+              <path d="M210 130V70" stroke="rgba(34,211,238,.6)" stroke-width="2" stroke-dasharray="4 6" class="dash-anim"/>
+              <circle cx="210" cy="130" r="6" fill="#22d3ee" class="pulse-node"/>
+              <circle cx="112" cy="225" r="5" fill="#818cf8" class="pulse-node delay-1"/>
+              <circle cx="307" cy="225" r="5" fill="#fbbf24" class="pulse-node delay-2"/>
+              <circle cx="210" cy="285" r="5" fill="#22d3ee" class="pulse-node delay-3"/>
+              <path d="M210 130L112 225M210 130L307 225M210 130L210 285" stroke="rgba(34,211,238,.25)" stroke-width="1.5"/>
+              <!-- wifi -->
+              <path d="M190 62a28 28 0 0 1 40 0" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" class="wifi-arc"/>
+              <path d="M198 72a17 17 0 0 1 24 0" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" class="wifi-arc delay-1"/>
+              <circle cx="210" cy="82" r="3.5" fill="#22d3ee"/>
+            </svg>
+
+            <!-- yüzen kontrol kartları -->
+            <div class="float-card float-card--1">
+              <span class="float-card__icon">🌡️</span>
+              <div><strong>22.5°C</strong><small>Salon · İklimlendirme</small></div>
+              <span class="switch switch--on" aria-hidden="true"></span>
+            </div>
+            <div class="float-card float-card--2">
+              <span class="float-card__icon">💡</span>
+              <div><strong>Aydınlatma</strong><small>4 oda aktif · %60</small></div>
+              <span class="switch switch--on" aria-hidden="true"></span>
+            </div>
+            <div class="float-card float-card--3">
+              <span class="float-card__icon">🛡️</span>
+              <div><strong>Güvenlik</strong><small>Sistem devrede</small></div>
+              <span class="dot-live" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HİZMETLER ============ -->
+    <section class="section" id="hizmetler">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Hizmetlerimiz</span>
+          <h2 class="section__title">Tek çatı altında <span class="text-gradient">akıllı çözümler</span></h2>
+          <p class="section__desc">
+            Donanımdan yazılıma, projelendirmeden 7/24 desteğe kadar ihtiyacınız olan
+            her şey tek bir mühendislik ekibinden.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card reveal">
+            <div class="card__icon card__icon--cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><circle cx="12" cy="14" r="2.5"/><path d="M12 16.5V18"/></svg>
+            </div>
+            <h3 class="card__title">KNX Akıllı Ev Sistemleri</h3>
+            <p class="card__desc">
+              Dünya standardı KNX altyapısıyla aydınlatma, perde, ısıtma ve tüm senaryolarınızı
+              tek merkezden yönetin. Sesli komut ve uzaktan erişim desteği.
+            </p>
+            <ul class="card__list">
+              <li>Aydınlatma &amp; perde senaryoları</li>
+              <li>Sesli asistan entegrasyonu</li>
+              <li>Enerji tasarrufu optimizasyonu</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon card__icon--indigo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/><path d="M10 21v-2h4v2"/></svg>
+            </div>
+            <h3 class="card__title">Bina Otomasyonu</h3>
+            <p class="card__desc">
+              Ofis, otel, AVM ve sitelerde HVAC, aydınlatma ve enerji yönetimini merkezileştiren
+              ölçeklenebilir bina otomasyon çözümleri.
+            </p>
+            <ul class="card__list">
+              <li>Merkezi HVAC &amp; enerji yönetimi</li>
+              <li>Ortak alan otomasyonu</li>
+              <li>Raporlama &amp; izleme panelleri</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon card__icon--amber">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.2 7.9 8 9 4.8-1.1 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3 class="card__title">Güvenlik &amp; Kamera Sistemleri</h3>
+            <p class="card__desc">
+              Akıllı kameralar, hareket ve kapı-pencere sensörleriyle eviniz ve işyeriniz
+              her an gözetim altında. Telefonunuzdan canlı izleyin.
+            </p>
+            <ul class="card__list">
+              <li>IP kamera kurulumu &amp; kayıt</li>
+              <li>Hareket &amp; kapı-pencere sensörleri</li>
+              <li>Mobil alarm bildirimleri</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon card__icon--cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <h3 class="card__title">İklimlendirme &amp; Enerji Kontrolü</h3>
+            <p class="card__desc">
+              Isıtma-soğutma sistemlerinizi odaya, saate ve alışkanlıklarınıza göre optimize edin;
+              konfordan ödün vermeden faturaları düşürün.
+            </p>
+            <ul class="card__list">
+              <li>Oda bazlı sıcaklık kontrolü</li>
+              <li>Zamanlama &amp; senaryo yönetimi</li>
+              <li>Tüketim takibi</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon card__icon--indigo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg>
+            </div>
+            <h3 class="card__title">Mobil Uygulama Geliştirme</h3>
+            <p class="card__desc">
+              iOS ve Android için markanıza özel mobil uygulamalar: akıllı ev kontrol panelleri,
+              kurumsal uygulamalar ve IoT arayüzleri.
+            </p>
+            <ul class="card__list">
+              <li>iOS &amp; Android uygulamalar</li>
+              <li>Akıllı ev kontrol arayüzleri</li>
+              <li>Bildirim &amp; uzaktan yönetim</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon card__icon--amber">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><path d="m9 9-2 2.5L9 14M15 9l2 2.5L15 14"/></svg>
+            </div>
+            <h3 class="card__title">Web Sitesi &amp; Yazılım Çözümleri</h3>
+            <p class="card__desc">
+              Modern, hızlı ve mobil uyumlu web siteleri; işletmenize özel panel ve
+              otomasyon yazılımları ile dijital dönüşümünüzü tamamlayın.
+            </p>
+            <ul class="card__list">
+              <li>Kurumsal web siteleri</li>
+              <li>Yönetim panelleri &amp; entegrasyonlar</li>
+              <li>SEO uyumlu, mobil öncelikli tasarım</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MOBİL KONTROL ============ -->
+    <section class="section section--alt" id="mobil">
+      <div class="container split">
+        <div class="split__visual reveal" aria-hidden="true">
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="app-head">
+                <small>Hoş geldiniz 👋</small>
+                <strong>Evim Kontrol Paneli</strong>
+              </div>
+              <div class="app-tiles">
+                <div class="app-tile app-tile--on">
+                  <span>💡</span><strong>Salon</strong><small>Açık · %75</small>
+                </div>
+                <div class="app-tile">
+                  <span>🌡️</span><strong>Klima</strong><small>22.5°C</small>
+                </div>
+                <div class="app-tile app-tile--on">
+                  <span>🪟</span><strong>Perdeler</strong><small>%40 açık</small>
+                </div>
+                <div class="app-tile">
+                  <span>🛡️</span><strong>Alarm</strong><small>Devrede</small>
+                </div>
+              </div>
+              <div class="app-scene">
+                <small>Aktif Senaryo</small>
+                <strong>🌙 Gece Modu</strong>
+                <span class="app-scene__bar"><i></i></span>
+              </div>
+              <div class="app-energy">
+                <small>Bugünkü enerji tüketimi</small>
+                <div class="app-energy__bars">
+                  <i style="height:40%"></i><i style="height:65%"></i><i style="height:35%"></i>
+                  <i style="height:80%"></i><i style="height:55%"></i><i style="height:70%"></i>
+                  <i style="height:45%"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split__content reveal">
+          <span class="section__tag">Mobil Kontrol</span>
+          <h2 class="section__title">Eviniz, <span class="text-gradient">cebinizde.</span></h2>
+          <p class="section__desc">
+            Nerede olursanız olun; aydınlatmadan güvenliğe, sıcaklıktan perdelere kadar
+            evinizin tüm sistemlerini telefonunuzdan yönetin.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <strong>Uzaktan tam kontrol</strong>
+              <span>Dünyanın her yerinden evinizi izleyin ve yönetin.</span>
+            </li>
+            <li>
+              <strong>Anlık güvenlik bildirimleri</strong>
+              <span>Hareket algılandığında telefonunuza anında bildirim gelsin.</span>
+            </li>
+            <li>
+              <strong>Kişisel senaryolar</strong>
+              <span>"Günaydın", "Film gecesi", "Evden çıkış" gibi tek dokunuşluk senaryolar.</span>
+            </li>
+            <li>
+              <strong>Enerji takibi</strong>
+              <span>Tüketiminizi gerçek zamanlı izleyin, tasarrufu görün.</span>
+            </li>
+          </ul>
+          <a href="#iletisim" class="btn btn--primary">Demo Talep Edin</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ YAZILIM ============ -->
+    <section class="section" id="yazilim">
+      <div class="container split split--reverse">
+        <div class="split__content reveal">
+          <span class="section__tag">Yazılım &amp; Dijital</span>
+          <h2 class="section__title">Sadece otomasyon değil, <span class="text-gradient">yazılım da biziz.</span></h2>
+          <p class="section__desc">
+            Mühendislik altyapımızı yazılımla birleştiriyoruz. İşletmenize özel mobil uygulamalar,
+            kurumsal web siteleri ve IoT entegrasyonlarıyla dijital dünyada da yanınızdayız.
+          </p>
+          <div class="mini-cards">
+            <div class="mini-card">
+              <strong>📱 Mobil Uygulama</strong>
+              <span>iOS &amp; Android — markanıza özel, mağazalarda yayına hazır.</span>
+            </div>
+            <div class="mini-card">
+              <strong>🌐 Kurumsal Web Sitesi</strong>
+              <span>Hızlı, modern, SEO uyumlu ve yönetimi kolay siteler.</span>
+            </div>
+            <div class="mini-card">
+              <strong>⚙️ Panel &amp; Otomasyon Yazılımı</strong>
+              <span>İş süreçlerinizi otomatikleştiren özel yönetim panelleri.</span>
+            </div>
+            <div class="mini-card">
+              <strong>🔗 IoT Entegrasyonları</strong>
+              <span>Cihazlarınızı ve sistemlerinizi birbirine bağlayan çözümler.</span>
+            </div>
+          </div>
+          <a href="#iletisim" class="btn btn--primary">Projenizi Konuşalım</a>
+        </div>
+
+        <div class="split__visual reveal" aria-hidden="true">
+          <div class="code-window">
+            <div class="code-window__bar"><i></i><i></i><i></i><span>mekatro-app · akilli-ev.js</span></div>
+            <pre class="code-window__body"><code><span class="c-kw">const</span> <span class="c-var">ev</span> = <span class="c-kw">new</span> <span class="c-fn">AkilliEv</span>(<span class="c-str">"Mekatro Home"</span>);
+
+<span class="c-var">ev</span>.<span class="c-fn">senaryo</span>(<span class="c-str">"aksam"</span>, () =&gt; {
+  <span class="c-var">ev</span>.aydinlatma.<span class="c-fn">ayarla</span>(<span class="c-num">60</span>);
+  <span class="c-var">ev</span>.perdeler.<span class="c-fn">kapat</span>();
+  <span class="c-var">ev</span>.klima.<span class="c-fn">sicaklik</span>(<span class="c-num">22.5</span>);
+  <span class="c-var">ev</span>.guvenlik.<span class="c-fn">aktifEt</span>();
+});
+
+<span class="c-cm">// Tek dokunuşla tüm ev hazır ✨</span>
+<span class="c-var">ev</span>.<span class="c-fn">calistir</span>(<span class="c-str">"aksam"</span>);</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SÜREÇ ============ -->
+    <section class="section section--alt" id="surec">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Çalışma Sürecimiz</span>
+          <h2 class="section__title">Keşiften teslime <span class="text-gradient">4 adım</span></h2>
+          <p class="section__desc">Her projede aynı disiplin: dinle, tasarla, kur, destekle.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Keşif &amp; Analiz</h3>
+            <p class="step__desc">Mekânınızı yerinde inceliyor, ihtiyaçlarınızı ve bütçenizi birlikte netleştiriyoruz.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Projelendirme</h3>
+            <p class="step__desc">Size özel sistem mimarisini çiziyor, şeffaf ve detaylı teklif sunuyoruz.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Kurulum &amp; Entegrasyon</h3>
+            <p class="step__desc">Cihaz montajı, yazılım kurulumu ve tüm sistemlerin entegrasyonunu tamamlıyoruz.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Devreye Alma &amp; Destek</h3>
+            <p class="step__desc">Sistemi test edip eğitimini veriyor, bakım ve 7/24 destekle yanınızda kalıyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEDEN BİZ ============ -->
+    <section class="section" id="neden-biz">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Neden Mekatro Home?</span>
+          <h2 class="section__title">Farkımız, <span class="text-gradient">mühendislik.</span></h2>
+        </div>
+
+        <div class="why-grid">
+          <div class="why reveal">
+            <span class="why__icon">🎓</span>
+            <h3>Uzman Mühendis Kadro</h3>
+            <p>KNX sertifikalı, deneyimli ekibimizle projeleriniz güvenilir ellerde.</p>
+          </div>
+          <div class="why reveal">
+            <span class="why__icon">🧩</span>
+            <h3>Uçtan Uca Çözüm</h3>
+            <p>Donanım, yazılım, kurulum ve destek — hepsi tek muhataptan.</p>
+          </div>
+          <div class="why reveal">
+            <span class="why__icon">🌍</span>
+            <h3>Dünya Standartları</h3>
+            <p>KNX gibi açık ve global standartlarla markaya bağımlı kalmazsınız.</p>
+          </div>
+          <div class="why reveal">
+            <span class="why__icon">🤝</span>
+            <h3>Satış Sonrası Destek</h3>
+            <p>Kurulumdan sonra da bakım, güncelleme ve 7/24 destekle yanınızdayız.</p>
+          </div>
+          <div class="why reveal">
+            <span class="why__icon">💰</span>
+            <h3>Enerji Tasarrufu</h3>
+            <p>Doğru otomasyon, konforu artırırken faturalarınızı düşürür.</p>
+          </div>
+          <div class="why reveal">
+            <span class="why__icon">🔒</span>
+            <h3>Güvenlik Önceliği</h3>
+            <p>Verileriniz ve eviniz için güvenliği en baştan tasarlıyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BANT ============ -->
+    <section class="cta-band reveal">
+      <div class="container cta-band__inner">
+        <div>
+          <h2>Projenizi konuşmaya hazır mısınız?</h2>
+          <p>Ücretsiz keşif ve teklif için bugün bize ulaşın.</p>
+        </div>
+        <a href="#iletisim" class="btn btn--light">Hemen İletişime Geçin</a>
+      </div>
+    </section>
+
+    <!-- ============ İLETİŞİM ============ -->
+    <section class="section" id="iletisim">
+      <div class="container split">
+        <div class="split__content reveal">
+          <span class="section__tag">İletişim</span>
+          <h2 class="section__title">Bize <span class="text-gradient">ulaşın</span></h2>
+          <p class="section__desc">
+            Sorularınız, keşif talepleriniz ve projeleriniz için formu doldurun ya da
+            doğrudan arayın — en kısa sürede dönüş yapalım.
+          </p>
+
+          <div class="contact-items">
+            <a class="contact-item" href="tel:+905401233536">
+              <span class="contact-item__icon">📞</span>
+              <div><small>Telefon</small><strong>+90 540 123 35 36</strong></div>
+            </a>
+            <a class="contact-item" href="mailto:mekatrohome@gmail.com">
+              <span class="contact-item__icon">✉️</span>
+              <div><small>E-posta</small><strong>mekatrohome@gmail.com</strong></div>
+            </a>
+            <div class="contact-item">
+              <span class="contact-item__icon">📍</span>
+              <div><small>Adres</small><strong>Türkiye</strong></div>
+            </div>
+            <a class="contact-item" href="https://wa.me/905401233536" target="_blank" rel="noopener">
+              <span class="contact-item__icon">💬</span>
+              <div><small>WhatsApp</small><strong>Hızlı mesaj gönderin</strong></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="split__visual reveal">
+          <form class="form" id="contactForm" action="mailto:mekatrohome@gmail.com" method="post" enctype="text/plain">
+            <div class="form__row">
+              <label class="form__field">
+                <span>Ad Soyad</span>
+                <input type="text" name="ad" placeholder="Adınız Soyadınız" required>
+              </label>
+              <label class="form__field">
+                <span>Telefon</span>
+                <input type="tel" name="telefon" placeholder="05xx xxx xx xx" required>
+              </label>
+            </div>
+            <label class="form__field">
+              <span>E-posta</span>
+              <input type="email" name="eposta" placeholder="ornek@eposta.com" required>
+            </label>
+            <label class="form__field">
+              <span>İlgilendiğiniz Hizmet</span>
+              <select name="hizmet">
+                <option>Akıllı Ev Sistemleri</option>
+                <option>Bina Otomasyonu</option>
+                <option>Güvenlik &amp; Kamera Sistemleri</option>
+                <option>Mobil Uygulama Geliştirme</option>
+                <option>Web Sitesi &amp; Yazılım</option>
+                <option>Diğer</option>
+              </select>
+            </label>
+            <label class="form__field">
+              <span>Mesajınız</span>
+              <textarea name="mesaj" rows="4" placeholder="Projenizden kısaca bahsedin..." required></textarea>
+            </label>
+            <button type="submit" class="btn btn--primary btn--full">Mesajı Gönder</button>
+            <p class="form__note" id="formNote" hidden>Teşekkürler! Mesajınız e-posta uygulamanız üzerinden iletilecek.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="logo">
+          <svg class="logo__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M24 6L42 21V42H30V30H18V42H6V21L24 6Z" stroke="url(#logoGrad2)" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="24" cy="21" r="3" fill="#22d3ee"/>
+            <path d="M24 24V30" stroke="#22d3ee" stroke-width="2"/>
+            <defs>
+              <linearGradient id="logoGrad2" x1="6" y1="6" x2="42" y2="42">
+                <stop stop-color="#22d3ee"/><stop offset="1" stop-color="#818cf8"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="logo__text">MEKATRO<em>HOME</em></span>
+        </a>
+        <p>Akıllı ev, bina otomasyonu ve yazılım çözümlerinde uçtan uca mühendislik.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Hizmetler</h4>
+        <a href="#hizmetler">Akıllı Ev Sistemleri</a>
+        <a href="#hizmetler">Bina Otomasyonu</a>
+        <a href="#hizmetler">Güvenlik Sistemleri</a>
+        <a href="#yazilim">Mobil Uygulama</a>
+        <a href="#yazilim">Web Sitesi &amp; Yazılım</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Kurumsal</h4>
+        <a href="#neden-biz">Neden Biz</a>
+        <a href="#surec">Çalışma Sürecimiz</a>
+        <a href="#iletisim">İletişim</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>İletişim</h4>
+        <a href="tel:+905401233536">+90 540 123 35 36</a>
+        <a href="mailto:mekatrohome@gmail.com">mekatrohome@gmail.com</a>
+        <a href="https://wa.me/905401233536" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© <span id="year"></span> Mekatro Home Mühendislik. Tüm hakları saklıdır.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
