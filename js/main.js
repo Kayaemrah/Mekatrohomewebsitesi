@@ -85,12 +85,11 @@
     });
   }
 
-  /* Form gönderim notu */
-  var form = document.getElementById("contactForm");
+  /* Form gönderildiyse (FormSubmit ?gonderildi=1 ile geri yönlendirir) teşekkür notu göster */
   var note = document.getElementById("formNote");
-  if (form && note) {
-    form.addEventListener("submit", function () {
-      note.hidden = false;
-    });
+  if (note && new URLSearchParams(window.location.search).has("gonderildi")) {
+    note.hidden = false;
+    var iletisim = document.getElementById("iletisim");
+    if (iletisim) iletisim.scrollIntoView();
   }
 })();
