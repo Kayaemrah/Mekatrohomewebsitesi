@@ -64,8 +64,9 @@ Bunlardan birini güncellerken index.html içinde TÜM geçtiği yerleri değiş
   dosyaları `gh-pages` dalına kopyalanır ve GitHub Pages oradan yayınlar
   (https://kayaemrah.github.io/Mekatrohomewebsitesi/). `gh-pages` dalına elle
   push yapmayın; içeriği workflow yönetir. Özel alan adı workflow'daki
-  `cname: mekatrohome.com` satırıyla korunur — bu satır silinirse her yayında
-  GitHub Pages alan adı ayarı kaybolur.
+  `cname: www.mekatrohome.com` satırıyla korunur — bu satır silinirse her yayında
+  GitHub Pages alan adı ayarı kaybolur. (Birincil alan adı `www`'ludur; kök alan adı
+  A kayıtları düzelince GitHub kökü otomatik olarak www'ya yönlendirir.)
 - Özel alan adı (mekatrohome.com) bağlanacaksa: GitHub repo Settings → Pages →
   Custom domain + isimtescil DNS'inde A/CNAME kayıtları güncellenmeli.
 
