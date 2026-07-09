@@ -54,6 +54,13 @@ Hâlâ yer tutucu olanlar:
 Bunlardan birini güncellerken index.html içinde TÜM geçtiği yerleri değiştirin
 (her biri birden fazla yerde geçer).
 
+## Yayınlama
+
+- `.github/workflows/deploy-pages.yml` — geliştirme dalına her push'ta site
+  GitHub Pages'a otomatik yayınlanır (https://kayaemrah.github.io/Mekatrohomewebsitesi/).
+- Özel alan adı (mekatrohome.com) bağlanacaksa: GitHub repo Settings → Pages →
+  Custom domain + isimtescil DNS'inde A/CNAME kayıtları güncellenmeli.
+
 ## Çalışma kuralları
 
 - Geliştirme `claude/mekatrohome-website-redesign-h3ff97` dalında yapılır ve oraya
