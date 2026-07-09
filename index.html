@@ -492,7 +492,12 @@
         </div>
 
         <div class="split__visual reveal">
-          <form class="form" id="contactForm" action="mailto:mekatrohome@gmail.com" method="post" enctype="text/plain">
+          <form class="form" id="contactForm" action="https://formsubmit.co/mekatrohome@gmail.com" method="POST" accept-charset="UTF-8">
+            <input type="hidden" name="_subject" value="Mekatro Home web sitesinden yeni mesaj">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://www.mekatrohome.com/?gonderildi=1#iletisim">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <div class="form__row">
               <label class="form__field">
                 <span>Ad Soyad</span>
@@ -523,7 +528,7 @@
               <textarea name="mesaj" rows="4" placeholder="Projenizden kısaca bahsedin..." required></textarea>
             </label>
             <button type="submit" class="btn btn--primary btn--full">Mesajı Gönder</button>
-            <p class="form__note" id="formNote" hidden>Teşekkürler! Mesajınız e-posta uygulamanız üzerinden iletilecek.</p>
+            <p class="form__note" id="formNote" hidden>Teşekkürler! Mesajınız bize ulaştı, en kısa sürede dönüş yapacağız.</p>
           </form>
         </div>
       </div>
