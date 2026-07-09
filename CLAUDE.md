@@ -57,7 +57,9 @@ Bunlardan birini güncellerken index.html içinde TÜM geçtiği yerleri değiş
 ## Yayınlama
 
 - `.github/workflows/deploy-pages.yml` — geliştirme dalına her push'ta site
-  GitHub Pages'a otomatik yayınlanır (https://kayaemrah.github.io/Mekatrohomewebsitesi/).
+  dosyaları `gh-pages` dalına kopyalanır ve GitHub Pages oradan yayınlar
+  (https://kayaemrah.github.io/Mekatrohomewebsitesi/). `gh-pages` dalına elle
+  push yapmayın; içeriği workflow yönetir.
 - Özel alan adı (mekatrohome.com) bağlanacaksa: GitHub repo Settings → Pages →
   Custom domain + isimtescil DNS'inde A/CNAME kayıtları güncellenmeli.
 
