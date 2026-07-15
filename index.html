@@ -9,7 +9,7 @@
   <meta property="og:title" content="Mekatro Home Mühendislik">
   <meta property="og:description" content="Akıllı ev, bina otomasyonu ve yazılım çözümlerinde uçtan uca mühendislik.">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -21,22 +21,14 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#hero" class="logo" aria-label="Mekatro Home ana sayfa">
-        <svg class="logo__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <path d="M24 6L42 21V42H30V30H18V42H6V21L24 6Z" stroke="url(#logoGrad)" stroke-width="3" stroke-linejoin="round"/>
-          <circle cx="24" cy="21" r="3" fill="#22d3ee"/>
-          <path d="M24 24V30" stroke="#22d3ee" stroke-width="2"/>
-          <defs>
-            <linearGradient id="logoGrad" x1="6" y1="6" x2="42" y2="42">
-              <stop stop-color="#22d3ee"/><stop offset="1" stop-color="#818cf8"/>
-            </linearGradient>
-          </defs>
-        </svg>
+        <img class="logo__img" src="assets/logo-mark.png" alt="MekatroHome logosu">
         <span class="logo__text">MEKATRO<em>HOME</em></span>
       </a>
 
       <nav class="nav" id="nav" aria-label="Ana menü">
         <a href="#hizmetler" class="nav__link" data-i18n="nav.hizmetler">Hizmetler</a>
         <a href="#knx" class="nav__link" data-i18n="nav.knx">KNX</a>
+        <a href="#urunler" class="nav__link" data-i18n="nav.urunler">Ürünler</a>
         <a href="#mobil" class="nav__link" data-i18n="nav.mobil">Mobil Kontrol</a>
         <a href="#yazilim" class="nav__link" data-i18n="nav.yazilim">Yazılım</a>
         <a href="#surec" class="nav__link" data-i18n="nav.surec">Süreç</a>
@@ -351,8 +343,52 @@
       </div>
     </section>
 
+    <!-- ============ ÜRÜNLER ============ -->
+    <section class="section" id="urunler">
+      <div class="container split">
+        <div class="split__visual reveal">
+          <div class="product-panel">
+            <img src="assets/mekatrox.png" alt="Mekatrox Control uygulama ikonu" class="product-panel__icon">
+            <div class="product-panel__name">
+              <strong>Mekatrox Control</strong>
+              <span data-i18n="pro.sub">KNX Kontrol Yazılımı</span>
+            </div>
+            <div class="product-panel__badges">
+              <span class="pill">💻 Windows PC</span>
+              <span class="pill">🤖 Android</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="split__content reveal">
+          <span class="section__tag" data-i18n="pro.tag">Ürünlerimiz</span>
+          <h2 class="section__title"><span data-i18n="pro.t1">Kendi yazılımımız:</span> <span class="text-gradient">Mekatrox</span></h2>
+          <p class="section__desc" data-i18n="pro.desc">
+            Mekatrox, KNX sistemleri için kendi geliştirdiğimiz kontrol yazılımıdır.
+            Evinizi veya binanızı hem Windows bilgisayarınızdan hem de Android
+            telefonunuzdan tek arayüzle yönetin.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <strong data-i18n="pro.f1t">Gerçek zamanlı KNX kontrolü</strong>
+              <span data-i18n="pro.f1d">Aydınlatma, perde, iklimlendirme, güvenlik ve senaryolar tek ekranda.</span>
+            </li>
+            <li>
+              <strong data-i18n="pro.f2t">PC ve Android'de çalışır</strong>
+              <span data-i18n="pro.f2d">Windows bilgisayarlar için masaüstü, Android cihazlar için mobil uygulama.</span>
+            </li>
+            <li>
+              <strong data-i18n="pro.f3t">Mekânınıza özel arayüz</strong>
+              <span data-i18n="pro.f3d">Paneller, odalarınıza ve senaryolarınıza göre size özel tasarlanır.</span>
+            </li>
+          </ul>
+          <a href="#iletisim" class="btn btn--primary" data-i18n="pro.cta">Mekatrox Demosu İsteyin</a>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ MOBİL KONTROL ============ -->
-    <section class="section" id="mobil">
+    <section class="section section--alt" id="mobil">
       <div class="container split">
         <div class="split__visual reveal" aria-hidden="true">
           <div class="phone">
@@ -424,7 +460,7 @@
     </section>
 
     <!-- ============ YAZILIM ============ -->
-    <section class="section section--alt" id="yazilim">
+    <section class="section" id="yazilim">
       <div class="container split split--reverse">
         <div class="split__content reveal">
           <span class="section__tag" data-i18n="yaz.tag">Yazılım &amp; Dijital</span>
@@ -474,7 +510,7 @@
     </section>
 
     <!-- ============ SÜREÇ ============ -->
-    <section class="section" id="surec">
+    <section class="section section--alt" id="surec">
       <div class="container">
         <div class="section__head reveal">
           <span class="section__tag" data-i18n="sur.tag">Çalışma Sürecimiz</span>
@@ -508,7 +544,7 @@
     </section>
 
     <!-- ============ NEDEN BİZ ============ -->
-    <section class="section section--alt" id="neden-biz">
+    <section class="section" id="neden-biz">
       <div class="container">
         <div class="section__head reveal">
           <span class="section__tag" data-i18n="ned.tag">Neden Mekatro Home?</span>
@@ -642,16 +678,7 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="#hero" class="logo">
-          <svg class="logo__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path d="M24 6L42 21V42H30V30H18V42H6V21L24 6Z" stroke="url(#logoGrad2)" stroke-width="3" stroke-linejoin="round"/>
-            <circle cx="24" cy="21" r="3" fill="#22d3ee"/>
-            <path d="M24 24V30" stroke="#22d3ee" stroke-width="2"/>
-            <defs>
-              <linearGradient id="logoGrad2" x1="6" y1="6" x2="42" y2="42">
-                <stop stop-color="#22d3ee"/><stop offset="1" stop-color="#818cf8"/>
-              </linearGradient>
-            </defs>
-          </svg>
+          <img class="logo__img" src="assets/logo-mark.png" alt="MekatroHome logosu">
           <span class="logo__text">MEKATRO<em>HOME</em></span>
         </a>
         <p data-i18n="foot.desc">Akıllı ev, bina otomasyonu ve yazılım çözümlerinde uçtan uca mühendislik.</p>
