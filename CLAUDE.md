@@ -26,8 +26,10 @@ kontrol ederek yapılır; otomatik test yoktur.
 
 - `index.html` — tüm bölümler tek sayfada, `#` çapa linkli navigasyon:
   hero → hizmetler (`#hizmetler`) → KNX (`#knx`, SMIL animasyonlu bus diyagramı)
-  → mobil kontrol (`#mobil`) → yazılım (`#yazilim`) → süreç (`#surec`)
-  → neden biz (`#neden-biz`) → CTA bandı → iletişim (`#iletisim`) → footer.
+  → ürünler (`#urunler`, Mekatrox Control tanıtımı) → mobil kontrol (`#mobil`)
+  → yazılım (`#yazilim`) → süreç (`#surec`) → neden biz (`#neden-biz`)
+  → CTA bandı → iletişim (`#iletisim`) → footer. Bölüm arka planları
+  `section--alt` ile dönüşümlüdür; araya bölüm eklerken sırayı koruyun.
 - **Çok dillilik:** site TR/EN/DE/AR destekler. Kaynak metin HTML içinde Türkçedir;
   çeviriler `js/i18n.js` içindeki sözlüklerde durur. Çevrilecek öğeler `data-i18n`
   (metin) ve `data-i18n-ph` (placeholder) öznitelikleriyle işaretlenir. **Yeni metin
@@ -43,9 +45,11 @@ kontrol ederek yapılır; otomatik test yoktur.
 - `js/main.js` — bağımlılıksız vanilla JS (IIFE): sticky header, mobil menü,
   `IntersectionObserver` ile `.reveal` scroll animasyonu ve `data-count` sayaçları.
   Yeni animasyonlu bölümlere `reveal` sınıfını eklemek yeterlidir.
-- Görseller harici dosya değildir: hero evi ve ikonlar inline SVG, telefon mockup'ı ve
-  kod penceresi saf CSS. Harici görsel/CDN eklemekten kaçının; site kendi kendine yeterli
-  kalmalı (fontlar hariç — Google Fonts: Inter + Space Grotesk).
+- Görseller: marka görselleri `assets/` altındadır — `logo.png` (tam logo, şeffaf),
+  `logo-mark.png` (header/footer'daki M monogramı), `favicon.png`, `mekatrox.png`
+  (Mekatrox Control uygulama ikonu, Ürünler bölümü). Geri kalan tüm görseller inline
+  SVG veya saf CSS'tir (hero evi, KNX diyagramı, telefon mockup'ı, kod penceresi).
+  Harici görsel/CDN eklemekten kaçının (fontlar hariç — Google Fonts: Inter + Space Grotesk).
 
 ## İletişim bilgileri ve kalan yer tutucular
 
