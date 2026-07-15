@@ -35,17 +35,32 @@
       </a>
 
       <nav class="nav" id="nav" aria-label="Ana menü">
-        <a href="#hizmetler" class="nav__link">Hizmetler</a>
-        <a href="#mobil" class="nav__link">Mobil Kontrol</a>
-        <a href="#yazilim" class="nav__link">Yazılım</a>
-        <a href="#surec" class="nav__link">Çalışma Sürecimiz</a>
-        <a href="#neden-biz" class="nav__link">Neden Biz</a>
-        <a href="#iletisim" class="nav__link nav__link--cta">Teklif Alın</a>
+        <a href="#hizmetler" class="nav__link" data-i18n="nav.hizmetler">Hizmetler</a>
+        <a href="#knx" class="nav__link" data-i18n="nav.knx">KNX</a>
+        <a href="#mobil" class="nav__link" data-i18n="nav.mobil">Mobil Kontrol</a>
+        <a href="#yazilim" class="nav__link" data-i18n="nav.yazilim">Yazılım</a>
+        <a href="#surec" class="nav__link" data-i18n="nav.surec">Süreç</a>
+        <a href="#neden-biz" class="nav__link" data-i18n="nav.neden">Neden Biz</a>
+        <a href="#iletisim" class="nav__link nav__link--cta" data-i18n="nav.teklif">Teklif Alın</a>
       </nav>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header__right">
+        <div class="lang" id="lang">
+          <button class="lang__btn" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Dil seçin">
+            🌐 <span id="langCurrent">TR</span> ▾
+          </button>
+          <div class="lang__menu" id="langMenu" role="listbox">
+            <button class="lang__option active" data-lang="tr" role="option">Türkçe</button>
+            <button class="lang__option" data-lang="en" role="option">English</button>
+            <button class="lang__option" data-lang="de" role="option">Deutsch</button>
+            <button class="lang__option" data-lang="ar" role="option">العربية</button>
+          </div>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -61,34 +76,34 @@
         <div class="hero__content reveal">
           <span class="badge">
             <span class="badge__dot"></span>
-            KNX Sertifikalı Akıllı Ev &amp; Otomasyon Mühendisliği
+            <span data-i18n="hero.badge">KNX Sertifikalı Akıllı Ev &amp; Otomasyon Mühendisliği</span>
           </span>
           <h1 class="hero__title">
-            Yaşam alanlarınız<br>
-            <span class="text-gradient">artık daha akıllı.</span>
+            <span data-i18n="hero.t1">Yaşam alanlarınız</span><br>
+            <span class="text-gradient" data-i18n="hero.t2">artık daha akıllı.</span>
           </h1>
-          <p class="hero__desc">
+          <p class="hero__desc" data-i18n="hero.desc">
             Akıllı ev sistemlerinden bina otomasyonuna, güvenlik çözümlerinden size özel
             mobil uygulama ve web yazılımlarına — keşiften devreye almaya kadar
             uçtan uca mühendislik hizmeti sunuyoruz.
           </p>
           <div class="hero__actions">
-            <a href="#iletisim" class="btn btn--primary">Ücretsiz Keşif Talep Edin</a>
-            <a href="#hizmetler" class="btn btn--ghost">Hizmetlerimizi İnceleyin</a>
+            <a href="#iletisim" class="btn btn--primary" data-i18n="hero.cta1">Ücretsiz Keşif Talep Edin</a>
+            <a href="#hizmetler" class="btn btn--ghost" data-i18n="hero.cta2">Hizmetlerimizi İnceleyin</a>
           </div>
 
           <div class="hero__stats">
             <div class="stat">
               <span class="stat__num" data-count="150">0</span><span class="stat__plus">+</span>
-              <span class="stat__label">Tamamlanan Proje</span>
+              <span class="stat__label" data-i18n="hero.s1">Tamamlanan Proje</span>
             </div>
             <div class="stat">
               <span class="stat__num" data-count="10">0</span><span class="stat__plus">+</span>
-              <span class="stat__label">Yıllık Deneyim</span>
+              <span class="stat__label" data-i18n="hero.s2">Yıllık Deneyim</span>
             </div>
             <div class="stat">
               <span class="stat__num" data-count="100">0</span><span class="stat__plus">%</span>
-              <span class="stat__label">Müşteri Memnuniyeti</span>
+              <span class="stat__label" data-i18n="hero.s3">Müşteri Memnuniyeti</span>
             </div>
           </div>
         </div>
@@ -120,17 +135,17 @@
             <!-- yüzen kontrol kartları -->
             <div class="float-card float-card--1">
               <span class="float-card__icon">🌡️</span>
-              <div><strong>22.5°C</strong><small>Salon · İklimlendirme</small></div>
+              <div><strong>22.5°C</strong><small data-i18n="hero.f1s">Salon · İklimlendirme</small></div>
               <span class="switch switch--on" aria-hidden="true"></span>
             </div>
             <div class="float-card float-card--2">
               <span class="float-card__icon">💡</span>
-              <div><strong>Aydınlatma</strong><small>4 oda aktif · %60</small></div>
+              <div><strong data-i18n="hero.f2t">Aydınlatma</strong><small data-i18n="hero.f2s">4 oda aktif · %60</small></div>
               <span class="switch switch--on" aria-hidden="true"></span>
             </div>
             <div class="float-card float-card--3">
               <span class="float-card__icon">🛡️</span>
-              <div><strong>Güvenlik</strong><small>Sistem devrede</small></div>
+              <div><strong data-i18n="hero.f3t">Güvenlik</strong><small data-i18n="hero.f3s">Sistem devrede</small></div>
               <span class="dot-live" aria-hidden="true"></span>
             </div>
           </div>
@@ -142,9 +157,9 @@
     <section class="section" id="hizmetler">
       <div class="container">
         <div class="section__head reveal">
-          <span class="section__tag">Hizmetlerimiz</span>
-          <h2 class="section__title">Tek çatı altında <span class="text-gradient">akıllı çözümler</span></h2>
-          <p class="section__desc">
+          <span class="section__tag" data-i18n="hiz.tag">Hizmetlerimiz</span>
+          <h2 class="section__title"><span data-i18n="hiz.t1">Tek çatı altında</span> <span class="text-gradient" data-i18n="hiz.t2">akıllı çözümler</span></h2>
+          <p class="section__desc" data-i18n="hiz.desc">
             Donanımdan yazılıma, projelendirmeden 7/24 desteğe kadar ihtiyacınız olan
             her şey tek bir mühendislik ekibinden.
           </p>
@@ -155,15 +170,15 @@
             <div class="card__icon card__icon--cyan">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><circle cx="12" cy="14" r="2.5"/><path d="M12 16.5V18"/></svg>
             </div>
-            <h3 class="card__title">KNX Akıllı Ev Sistemleri</h3>
-            <p class="card__desc">
+            <h3 class="card__title" data-i18n="c1.t">KNX Akıllı Ev Sistemleri</h3>
+            <p class="card__desc" data-i18n="c1.d">
               Dünya standardı KNX altyapısıyla aydınlatma, perde, ısıtma ve tüm senaryolarınızı
               tek merkezden yönetin. Sesli komut ve uzaktan erişim desteği.
             </p>
             <ul class="card__list">
-              <li>Aydınlatma &amp; perde senaryoları</li>
-              <li>Sesli asistan entegrasyonu</li>
-              <li>Enerji tasarrufu optimizasyonu</li>
+              <li data-i18n="c1.l1">Aydınlatma &amp; perde senaryoları</li>
+              <li data-i18n="c1.l2">Sesli asistan entegrasyonu</li>
+              <li data-i18n="c1.l3">Enerji tasarrufu optimizasyonu</li>
             </ul>
           </article>
 
@@ -171,15 +186,15 @@
             <div class="card__icon card__icon--indigo">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/><path d="M10 21v-2h4v2"/></svg>
             </div>
-            <h3 class="card__title">Bina Otomasyonu</h3>
-            <p class="card__desc">
+            <h3 class="card__title" data-i18n="c2.t">Bina Otomasyonu</h3>
+            <p class="card__desc" data-i18n="c2.d">
               Ofis, otel, AVM ve sitelerde HVAC, aydınlatma ve enerji yönetimini merkezileştiren
               ölçeklenebilir bina otomasyon çözümleri.
             </p>
             <ul class="card__list">
-              <li>Merkezi HVAC &amp; enerji yönetimi</li>
-              <li>Ortak alan otomasyonu</li>
-              <li>Raporlama &amp; izleme panelleri</li>
+              <li data-i18n="c2.l1">Merkezi HVAC &amp; enerji yönetimi</li>
+              <li data-i18n="c2.l2">Ortak alan otomasyonu</li>
+              <li data-i18n="c2.l3">Raporlama &amp; izleme panelleri</li>
             </ul>
           </article>
 
@@ -187,15 +202,15 @@
             <div class="card__icon card__icon--amber">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.2 7.9 8 9 4.8-1.1 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
             </div>
-            <h3 class="card__title">Güvenlik &amp; Kamera Sistemleri</h3>
-            <p class="card__desc">
+            <h3 class="card__title" data-i18n="c3.t">Güvenlik &amp; Kamera Sistemleri</h3>
+            <p class="card__desc" data-i18n="c3.d">
               Akıllı kameralar, hareket ve kapı-pencere sensörleriyle eviniz ve işyeriniz
               her an gözetim altında. Telefonunuzdan canlı izleyin.
             </p>
             <ul class="card__list">
-              <li>IP kamera kurulumu &amp; kayıt</li>
-              <li>Hareket &amp; kapı-pencere sensörleri</li>
-              <li>Mobil alarm bildirimleri</li>
+              <li data-i18n="c3.l1">IP kamera kurulumu &amp; kayıt</li>
+              <li data-i18n="c3.l2">Hareket &amp; kapı-pencere sensörleri</li>
+              <li data-i18n="c3.l3">Mobil alarm bildirimleri</li>
             </ul>
           </article>
 
@@ -203,15 +218,15 @@
             <div class="card__icon card__icon--cyan">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
             </div>
-            <h3 class="card__title">İklimlendirme &amp; Enerji Kontrolü</h3>
-            <p class="card__desc">
+            <h3 class="card__title" data-i18n="c4.t">İklimlendirme &amp; Enerji Kontrolü</h3>
+            <p class="card__desc" data-i18n="c4.d">
               Isıtma-soğutma sistemlerinizi odaya, saate ve alışkanlıklarınıza göre optimize edin;
               konfordan ödün vermeden faturaları düşürün.
             </p>
             <ul class="card__list">
-              <li>Oda bazlı sıcaklık kontrolü</li>
-              <li>Zamanlama &amp; senaryo yönetimi</li>
-              <li>Tüketim takibi</li>
+              <li data-i18n="c4.l1">Oda bazlı sıcaklık kontrolü</li>
+              <li data-i18n="c4.l2">Zamanlama &amp; senaryo yönetimi</li>
+              <li data-i18n="c4.l3">Tüketim takibi</li>
             </ul>
           </article>
 
@@ -219,15 +234,15 @@
             <div class="card__icon card__icon--indigo">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg>
             </div>
-            <h3 class="card__title">Mobil Uygulama Geliştirme</h3>
-            <p class="card__desc">
+            <h3 class="card__title" data-i18n="c5.t">Mobil Uygulama Geliştirme</h3>
+            <p class="card__desc" data-i18n="c5.d">
               iOS ve Android için markanıza özel mobil uygulamalar: akıllı ev kontrol panelleri,
               kurumsal uygulamalar ve IoT arayüzleri.
             </p>
             <ul class="card__list">
-              <li>iOS &amp; Android uygulamalar</li>
-              <li>Akıllı ev kontrol arayüzleri</li>
-              <li>Bildirim &amp; uzaktan yönetim</li>
+              <li data-i18n="c5.l1">iOS &amp; Android uygulamalar</li>
+              <li data-i18n="c5.l2">Akıllı ev kontrol arayüzleri</li>
+              <li data-i18n="c5.l3">Bildirim &amp; uzaktan yönetim</li>
             </ul>
           </article>
 
@@ -235,53 +250,139 @@
             <div class="card__icon card__icon--amber">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><path d="m9 9-2 2.5L9 14M15 9l2 2.5L15 14"/></svg>
             </div>
-            <h3 class="card__title">Web Sitesi &amp; Yazılım Çözümleri</h3>
-            <p class="card__desc">
+            <h3 class="card__title" data-i18n="c6.t">Web Sitesi &amp; Yazılım Çözümleri</h3>
+            <p class="card__desc" data-i18n="c6.d">
               Modern, hızlı ve mobil uyumlu web siteleri; işletmenize özel panel ve
               otomasyon yazılımları ile dijital dönüşümünüzü tamamlayın.
             </p>
             <ul class="card__list">
-              <li>Kurumsal web siteleri</li>
-              <li>Yönetim panelleri &amp; entegrasyonlar</li>
-              <li>SEO uyumlu, mobil öncelikli tasarım</li>
+              <li data-i18n="c6.l1">Kurumsal web siteleri</li>
+              <li data-i18n="c6.l2">Yönetim panelleri &amp; entegrasyonlar</li>
+              <li data-i18n="c6.l3">SEO uyumlu, mobil öncelikli tasarım</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ============ KNX ============ -->
+    <section class="section section--alt" id="knx">
+      <div class="container split">
+        <div class="split__visual reveal" aria-hidden="true">
+          <div class="knx-panel">
+            <svg viewBox="0 0 520 310" fill="none" class="knx-svg">
+              <!-- bus hattı -->
+              <path d="M25 155 H495" stroke="#34d399" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+              <text x="483" y="143" text-anchor="end" font-size="11" fill="rgba(148,163,184,.7)" data-i18n="knx.bus">KNX Bus</text>
+
+              <!-- merkez KNX modülü -->
+              <rect x="238" y="135" width="44" height="40" rx="8" fill="rgba(52,211,153,.12)" stroke="#34d399" stroke-width="2"/>
+              <text x="260" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#34d399">KNX</text>
+
+              <!-- cihaz 1: buton (üst) -->
+              <path d="M90 155 V100" stroke="rgba(52,211,153,.45)" stroke-width="2"/>
+              <rect x="55" y="52" width="70" height="48" rx="10" fill="rgba(34,211,238,.08)" stroke="rgba(34,211,238,.5)" stroke-width="2" class="pulse-soft"/>
+              <rect x="78" y="66" width="24" height="20" rx="4" stroke="#22d3ee" stroke-width="2"/>
+              <circle cx="90" cy="76" r="3" fill="#22d3ee"/>
+              <text x="90" y="42" text-anchor="middle" font-size="12" fill="#94a3b8" data-i18n="knx.dev1">Akıllı Buton</text>
+
+              <!-- cihaz 2: sensör (alt) -->
+              <path d="M190 155 V210" stroke="rgba(52,211,153,.45)" stroke-width="2"/>
+              <rect x="155" y="210" width="70" height="48" rx="10" fill="rgba(129,140,248,.08)" stroke="rgba(129,140,248,.5)" stroke-width="2" class="pulse-soft delay-1"/>
+              <circle cx="190" cy="234" r="5" fill="#818cf8"/>
+              <path d="M180 224a14 14 0 0 1 20 0M175 219a21 21 0 0 1 30 0" stroke="#818cf8" stroke-width="2" stroke-linecap="round"/>
+              <text x="190" y="276" text-anchor="middle" font-size="12" fill="#94a3b8" data-i18n="knx.dev2">Hareket Sensörü</text>
+
+              <!-- cihaz 3: termostat (üst) -->
+              <path d="M330 155 V100" stroke="rgba(52,211,153,.45)" stroke-width="2"/>
+              <rect x="295" y="52" width="70" height="48" rx="10" fill="rgba(251,191,36,.08)" stroke="rgba(251,191,36,.5)" stroke-width="2" class="pulse-soft delay-2"/>
+              <circle cx="330" cy="76" r="12" stroke="#fbbf24" stroke-width="2"/>
+              <path d="M330 76 L336 70" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+              <text x="330" y="42" text-anchor="middle" font-size="12" fill="#94a3b8" data-i18n="knx.dev3">Termostat</text>
+
+              <!-- cihaz 4: panjur (alt) -->
+              <path d="M430 155 V210" stroke="rgba(52,211,153,.45)" stroke-width="2"/>
+              <rect x="395" y="210" width="70" height="48" rx="10" fill="rgba(34,211,238,.08)" stroke="rgba(34,211,238,.5)" stroke-width="2" class="pulse-soft delay-3"/>
+              <path d="M412 224h36M412 232h36M412 240h24" stroke="#22d3ee" stroke-width="2" stroke-linecap="round"/>
+              <text x="430" y="276" text-anchor="middle" font-size="12" fill="#94a3b8" data-i18n="knx.dev4">Panjur Motoru</text>
+
+              <!-- hat üzerinde akan telgraflar -->
+              <circle r="5" fill="#22d3ee">
+                <animateMotion dur="4s" repeatCount="indefinite" path="M25 155 H495"/>
+              </circle>
+              <circle r="4" fill="#fbbf24">
+                <animateMotion dur="5s" begin="0s" repeatCount="indefinite" path="M495 155 H25"/>
+              </circle>
+              <circle r="3" fill="#818cf8">
+                <animateMotion dur="3.2s" begin="0s" repeatCount="indefinite" path="M25 155 H495"/>
+              </circle>
+            </svg>
+            <div class="knx-status">
+              <span class="dot-live"></span>
+              <span data-i18n="knx.status">Bus hattı aktif · cihazlar haberleşiyor</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="split__content reveal">
+          <span class="section__tag" data-i18n="knx.tag">KNX Teknolojisi</span>
+          <h2 class="section__title"><span data-i18n="knx.t1">Evinizin görünmez sinir sistemi:</span> <span class="text-gradient">KNX</span></h2>
+          <p class="section__desc" data-i18n="knx.desc">
+            Dünyanın en yaygın açık bina otomasyon standardı KNX, evinizdeki tüm cihazları
+            tek bir akıllı hat üzerinde konuşturur. Butonlar, sensörler ve motorlar aynı
+            dili konuşur; siz sadece senaryoyu seçersiniz.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <strong data-i18n="knx.b1t">Tek hat, sınırsız senaryo</strong>
+              <span data-i18n="knx.b1d">Anahtarlar, sensörler ve aktüatörler aynı bus hattı üzerinden haberleşir.</span>
+            </li>
+            <li>
+              <strong data-i18n="knx.b2t">Markadan bağımsız</strong>
+              <span data-i18n="knx.b2d">500'den fazla üreticinin cihazı birbiriyle uyumlu çalışır; tek markaya mahkûm kalmazsınız.</span>
+            </li>
+            <li>
+              <strong data-i18n="knx.b3t">Geleceğe hazır</strong>
+              <span data-i18n="knx.b3d">İhtiyacınız büyüdükçe hatta yeni cihazlar eklenir; altyapınız aynı kalır.</span>
+            </li>
+          </ul>
+          <a href="#iletisim" class="btn btn--primary" data-i18n="knx.cta">KNX Keşfi Talep Edin</a>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ MOBİL KONTROL ============ -->
-    <section class="section section--alt" id="mobil">
+    <section class="section" id="mobil">
       <div class="container split">
         <div class="split__visual reveal" aria-hidden="true">
           <div class="phone">
             <div class="phone__notch"></div>
             <div class="phone__screen">
               <div class="app-head">
-                <small>Hoş geldiniz 👋</small>
-                <strong>Evim Kontrol Paneli</strong>
+                <small data-i18n="app.hi">Hoş geldiniz 👋</small>
+                <strong data-i18n="app.panel">Evim Kontrol Paneli</strong>
               </div>
               <div class="app-tiles">
                 <div class="app-tile app-tile--on">
-                  <span>💡</span><strong>Salon</strong><small>Açık · %75</small>
+                  <span>💡</span><strong data-i18n="app.t1">Salon</strong><small data-i18n="app.t1s">Açık · %75</small>
                 </div>
                 <div class="app-tile">
-                  <span>🌡️</span><strong>Klima</strong><small>22.5°C</small>
+                  <span>🌡️</span><strong data-i18n="app.t2">Klima</strong><small>22.5°C</small>
                 </div>
                 <div class="app-tile app-tile--on">
-                  <span>🪟</span><strong>Perdeler</strong><small>%40 açık</small>
+                  <span>🪟</span><strong data-i18n="app.t3">Perdeler</strong><small data-i18n="app.t3s">%40 açık</small>
                 </div>
                 <div class="app-tile">
-                  <span>🛡️</span><strong>Alarm</strong><small>Devrede</small>
+                  <span>🛡️</span><strong data-i18n="app.t4">Alarm</strong><small data-i18n="app.t4s">Devrede</small>
                 </div>
               </div>
               <div class="app-scene">
-                <small>Aktif Senaryo</small>
-                <strong>🌙 Gece Modu</strong>
+                <small data-i18n="app.scene">Aktif Senaryo</small>
+                <strong data-i18n="app.scenet">🌙 Gece Modu</strong>
                 <span class="app-scene__bar"><i></i></span>
               </div>
               <div class="app-energy">
-                <small>Bugünkü enerji tüketimi</small>
+                <small data-i18n="app.energy">Bugünkü enerji tüketimi</small>
                 <div class="app-energy__bars">
                   <i style="height:40%"></i><i style="height:65%"></i><i style="height:35%"></i>
                   <i style="height:80%"></i><i style="height:55%"></i><i style="height:70%"></i>
@@ -293,64 +394,64 @@
         </div>
 
         <div class="split__content reveal">
-          <span class="section__tag">Mobil Kontrol</span>
-          <h2 class="section__title">Eviniz, <span class="text-gradient">cebinizde.</span></h2>
-          <p class="section__desc">
+          <span class="section__tag" data-i18n="mob.tag">Mobil Kontrol</span>
+          <h2 class="section__title"><span data-i18n="mob.t1">Eviniz,</span> <span class="text-gradient" data-i18n="mob.t2">cebinizde.</span></h2>
+          <p class="section__desc" data-i18n="mob.desc">
             Nerede olursanız olun; aydınlatmadan güvenliğe, sıcaklıktan perdelere kadar
             evinizin tüm sistemlerini telefonunuzdan yönetin.
           </p>
           <ul class="feature-list">
             <li>
-              <strong>Uzaktan tam kontrol</strong>
-              <span>Dünyanın her yerinden evinizi izleyin ve yönetin.</span>
+              <strong data-i18n="mob.f1t">Uzaktan tam kontrol</strong>
+              <span data-i18n="mob.f1d">Dünyanın her yerinden evinizi izleyin ve yönetin.</span>
             </li>
             <li>
-              <strong>Anlık güvenlik bildirimleri</strong>
-              <span>Hareket algılandığında telefonunuza anında bildirim gelsin.</span>
+              <strong data-i18n="mob.f2t">Anlık güvenlik bildirimleri</strong>
+              <span data-i18n="mob.f2d">Hareket algılandığında telefonunuza anında bildirim gelsin.</span>
             </li>
             <li>
-              <strong>Kişisel senaryolar</strong>
-              <span>"Günaydın", "Film gecesi", "Evden çıkış" gibi tek dokunuşluk senaryolar.</span>
+              <strong data-i18n="mob.f3t">Kişisel senaryolar</strong>
+              <span data-i18n="mob.f3d">"Günaydın", "Film gecesi", "Evden çıkış" gibi tek dokunuşluk senaryolar.</span>
             </li>
             <li>
-              <strong>Enerji takibi</strong>
-              <span>Tüketiminizi gerçek zamanlı izleyin, tasarrufu görün.</span>
+              <strong data-i18n="mob.f4t">Enerji takibi</strong>
+              <span data-i18n="mob.f4d">Tüketiminizi gerçek zamanlı izleyin, tasarrufu görün.</span>
             </li>
           </ul>
-          <a href="#iletisim" class="btn btn--primary">Demo Talep Edin</a>
+          <a href="#iletisim" class="btn btn--primary" data-i18n="mob.cta">Demo Talep Edin</a>
         </div>
       </div>
     </section>
 
     <!-- ============ YAZILIM ============ -->
-    <section class="section" id="yazilim">
+    <section class="section section--alt" id="yazilim">
       <div class="container split split--reverse">
         <div class="split__content reveal">
-          <span class="section__tag">Yazılım &amp; Dijital</span>
-          <h2 class="section__title">Sadece otomasyon değil, <span class="text-gradient">yazılım da biziz.</span></h2>
-          <p class="section__desc">
+          <span class="section__tag" data-i18n="yaz.tag">Yazılım &amp; Dijital</span>
+          <h2 class="section__title"><span data-i18n="yaz.t1">Sadece otomasyon değil,</span> <span class="text-gradient" data-i18n="yaz.t2">yazılım da biziz.</span></h2>
+          <p class="section__desc" data-i18n="yaz.desc">
             Mühendislik altyapımızı yazılımla birleştiriyoruz. İşletmenize özel mobil uygulamalar,
             kurumsal web siteleri ve IoT entegrasyonlarıyla dijital dünyada da yanınızdayız.
           </p>
           <div class="mini-cards">
             <div class="mini-card">
-              <strong>📱 Mobil Uygulama</strong>
-              <span>iOS &amp; Android — markanıza özel, mağazalarda yayına hazır.</span>
+              <strong data-i18n="yaz.m1t">📱 Mobil Uygulama</strong>
+              <span data-i18n="yaz.m1d">iOS &amp; Android — markanıza özel, mağazalarda yayına hazır.</span>
             </div>
             <div class="mini-card">
-              <strong>🌐 Kurumsal Web Sitesi</strong>
-              <span>Hızlı, modern, SEO uyumlu ve yönetimi kolay siteler.</span>
+              <strong data-i18n="yaz.m2t">🌐 Kurumsal Web Sitesi</strong>
+              <span data-i18n="yaz.m2d">Hızlı, modern, SEO uyumlu ve yönetimi kolay siteler.</span>
             </div>
             <div class="mini-card">
-              <strong>⚙️ Panel &amp; Otomasyon Yazılımı</strong>
-              <span>İş süreçlerinizi otomatikleştiren özel yönetim panelleri.</span>
+              <strong data-i18n="yaz.m3t">⚙️ Panel &amp; Otomasyon Yazılımı</strong>
+              <span data-i18n="yaz.m3d">İş süreçlerinizi otomatikleştiren özel yönetim panelleri.</span>
             </div>
             <div class="mini-card">
-              <strong>🔗 IoT Entegrasyonları</strong>
-              <span>Cihazlarınızı ve sistemlerinizi birbirine bağlayan çözümler.</span>
+              <strong data-i18n="yaz.m4t">🔗 IoT Entegrasyonları</strong>
+              <span data-i18n="yaz.m4d">Cihazlarınızı ve sistemlerinizi birbirine bağlayan çözümler.</span>
             </div>
           </div>
-          <a href="#iletisim" class="btn btn--primary">Projenizi Konuşalım</a>
+          <a href="#iletisim" class="btn btn--primary" data-i18n="yaz.cta">Projenizi Konuşalım</a>
         </div>
 
         <div class="split__visual reveal" aria-hidden="true">
@@ -373,77 +474,77 @@
     </section>
 
     <!-- ============ SÜREÇ ============ -->
-    <section class="section section--alt" id="surec">
+    <section class="section" id="surec">
       <div class="container">
         <div class="section__head reveal">
-          <span class="section__tag">Çalışma Sürecimiz</span>
-          <h2 class="section__title">Keşiften teslime <span class="text-gradient">4 adım</span></h2>
-          <p class="section__desc">Her projede aynı disiplin: dinle, tasarla, kur, destekle.</p>
+          <span class="section__tag" data-i18n="sur.tag">Çalışma Sürecimiz</span>
+          <h2 class="section__title"><span data-i18n="sur.t1">Keşiften teslime</span> <span class="text-gradient" data-i18n="sur.t2">4 adım</span></h2>
+          <p class="section__desc" data-i18n="sur.desc">Her projede aynı disiplin: dinle, tasarla, kur, destekle.</p>
         </div>
 
         <div class="steps">
           <div class="step reveal">
             <span class="step__num">01</span>
-            <h3 class="step__title">Keşif &amp; Analiz</h3>
-            <p class="step__desc">Mekânınızı yerinde inceliyor, ihtiyaçlarınızı ve bütçenizi birlikte netleştiriyoruz.</p>
+            <h3 class="step__title" data-i18n="sur.s1t">Keşif &amp; Analiz</h3>
+            <p class="step__desc" data-i18n="sur.s1d">Mekânınızı yerinde inceliyor, ihtiyaçlarınızı ve bütçenizi birlikte netleştiriyoruz.</p>
           </div>
           <div class="step reveal">
             <span class="step__num">02</span>
-            <h3 class="step__title">Projelendirme</h3>
-            <p class="step__desc">Size özel sistem mimarisini çiziyor, şeffaf ve detaylı teklif sunuyoruz.</p>
+            <h3 class="step__title" data-i18n="sur.s2t">Projelendirme</h3>
+            <p class="step__desc" data-i18n="sur.s2d">Size özel sistem mimarisini çiziyor, şeffaf ve detaylı teklif sunuyoruz.</p>
           </div>
           <div class="step reveal">
             <span class="step__num">03</span>
-            <h3 class="step__title">Kurulum &amp; Entegrasyon</h3>
-            <p class="step__desc">Cihaz montajı, yazılım kurulumu ve tüm sistemlerin entegrasyonunu tamamlıyoruz.</p>
+            <h3 class="step__title" data-i18n="sur.s3t">Kurulum &amp; Entegrasyon</h3>
+            <p class="step__desc" data-i18n="sur.s3d">Cihaz montajı, yazılım kurulumu ve tüm sistemlerin entegrasyonunu tamamlıyoruz.</p>
           </div>
           <div class="step reveal">
             <span class="step__num">04</span>
-            <h3 class="step__title">Devreye Alma &amp; Destek</h3>
-            <p class="step__desc">Sistemi test edip eğitimini veriyor, bakım ve 7/24 destekle yanınızda kalıyoruz.</p>
+            <h3 class="step__title" data-i18n="sur.s4t">Devreye Alma &amp; Destek</h3>
+            <p class="step__desc" data-i18n="sur.s4d">Sistemi test edip eğitimini veriyor, bakım ve 7/24 destekle yanınızda kalıyoruz.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============ NEDEN BİZ ============ -->
-    <section class="section" id="neden-biz">
+    <section class="section section--alt" id="neden-biz">
       <div class="container">
         <div class="section__head reveal">
-          <span class="section__tag">Neden Mekatro Home?</span>
-          <h2 class="section__title">Farkımız, <span class="text-gradient">mühendislik.</span></h2>
+          <span class="section__tag" data-i18n="ned.tag">Neden Mekatro Home?</span>
+          <h2 class="section__title"><span data-i18n="ned.t1">Farkımız,</span> <span class="text-gradient" data-i18n="ned.t2">mühendislik.</span></h2>
         </div>
 
         <div class="why-grid">
           <div class="why reveal">
             <span class="why__icon">🎓</span>
-            <h3>Uzman Mühendis Kadro</h3>
-            <p>KNX sertifikalı, deneyimli ekibimizle projeleriniz güvenilir ellerde.</p>
+            <h3 data-i18n="ned.w1t">Uzman Mühendis Kadro</h3>
+            <p data-i18n="ned.w1d">KNX sertifikalı, deneyimli ekibimizle projeleriniz güvenilir ellerde.</p>
           </div>
           <div class="why reveal">
             <span class="why__icon">🧩</span>
-            <h3>Uçtan Uca Çözüm</h3>
-            <p>Donanım, yazılım, kurulum ve destek — hepsi tek muhataptan.</p>
+            <h3 data-i18n="ned.w2t">Uçtan Uca Çözüm</h3>
+            <p data-i18n="ned.w2d">Donanım, yazılım, kurulum ve destek — hepsi tek muhataptan.</p>
           </div>
           <div class="why reveal">
             <span class="why__icon">🌍</span>
-            <h3>Dünya Standartları</h3>
-            <p>KNX gibi açık ve global standartlarla markaya bağımlı kalmazsınız.</p>
+            <h3 data-i18n="ned.w3t">Dünya Standartları</h3>
+            <p data-i18n="ned.w3d">KNX gibi açık ve global standartlarla markaya bağımlı kalmazsınız.</p>
           </div>
           <div class="why reveal">
             <span class="why__icon">🤝</span>
-            <h3>Satış Sonrası Destek</h3>
-            <p>Kurulumdan sonra da bakım, güncelleme ve 7/24 destekle yanınızdayız.</p>
+            <h3 data-i18n="ned.w4t">Satış Sonrası Destek</h3>
+            <p data-i18n="ned.w4d">Kurulumdan sonra da bakım, güncelleme ve 7/24 destekle yanınızdayız.</p>
           </div>
           <div class="why reveal">
             <span class="why__icon">💰</span>
-            <h3>Enerji Tasarrufu</h3>
-            <p>Doğru otomasyon, konforu artırırken faturalarınızı düşürür.</p>
+            <h3 data-i18n="ned.w5t">Enerji Tasarrufu</h3>
+            <p data-i18n="ned.w5d">Doğru otomasyon, konforu artırırken faturalarınızı düşürür.</p>
           </div>
           <div class="why reveal">
             <span class="why__icon">🔒</span>
-            <h3>Güvenlik Önceliği</h3>
-            <p>Verileriniz ve eviniz için güvenliği en baştan tasarlıyoruz.</p>
+            <h3 data-i18n="ned.w6t">Güvenlik Önceliği</h3>
+            <p data-i18n="ned.w6d">Verileriniz ve eviniz için güvenliği en baştan tasarlıyoruz.</p>
           </div>
         </div>
       </div>
@@ -453,10 +554,10 @@
     <section class="cta-band reveal">
       <div class="container cta-band__inner">
         <div>
-          <h2>Projenizi konuşmaya hazır mısınız?</h2>
-          <p>Ücretsiz keşif ve teklif için bugün bize ulaşın.</p>
+          <h2 data-i18n="cta.t">Projenizi konuşmaya hazır mısınız?</h2>
+          <p data-i18n="cta.d">Ücretsiz keşif ve teklif için bugün bize ulaşın.</p>
         </div>
-        <a href="#iletisim" class="btn btn--light">Hemen İletişime Geçin</a>
+        <a href="#iletisim" class="btn btn--light" data-i18n="cta.btn">Hemen İletişime Geçin</a>
       </div>
     </section>
 
@@ -464,9 +565,9 @@
     <section class="section" id="iletisim">
       <div class="container split">
         <div class="split__content reveal">
-          <span class="section__tag">İletişim</span>
-          <h2 class="section__title">Bize <span class="text-gradient">ulaşın</span></h2>
-          <p class="section__desc">
+          <span class="section__tag" data-i18n="il.tag">İletişim</span>
+          <h2 class="section__title"><span data-i18n="il.t1">Bize</span> <span class="text-gradient" data-i18n="il.t2">ulaşın</span></h2>
+          <p class="section__desc" data-i18n="il.desc">
             Sorularınız, keşif talepleriniz ve projeleriniz için formu doldurun ya da
             doğrudan arayın — en kısa sürede dönüş yapalım.
           </p>
@@ -474,19 +575,19 @@
           <div class="contact-items">
             <a class="contact-item" href="tel:+905401233536">
               <span class="contact-item__icon">📞</span>
-              <div><small>Telefon</small><strong>+90 540 123 35 36</strong></div>
+              <div><small data-i18n="il.c1l">Telefon</small><strong>+90 540 123 35 36</strong></div>
             </a>
             <a class="contact-item" href="mailto:mekatrohome@gmail.com?subject=Mekatro%20Home%20-%20%C4%B0leti%C5%9Fim">
               <span class="contact-item__icon">✉️</span>
-              <div><small>E-posta</small><strong>mekatrohome@gmail.com</strong></div>
+              <div><small data-i18n="il.c2l">E-posta</small><strong>mekatrohome@gmail.com</strong></div>
             </a>
             <div class="contact-item">
               <span class="contact-item__icon">📍</span>
-              <div><small>Adres</small><strong>Türkiye/Gaziantep</strong></div>
+              <div><small data-i18n="il.c3l">Adres</small><strong data-i18n="il.c3v">Türkiye / Gaziantep</strong></div>
             </div>
             <a class="contact-item" href="https://wa.me/905401233536" target="_blank" rel="noopener">
               <span class="contact-item__icon">💬</span>
-              <div><small>WhatsApp</small><strong>Hızlı mesaj gönderin</strong></div>
+              <div><small>WhatsApp</small><strong data-i18n="il.c4v">Hızlı mesaj gönderin</strong></div>
             </a>
           </div>
         </div>
@@ -500,35 +601,35 @@
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <div class="form__row">
               <label class="form__field">
-                <span>Ad Soyad</span>
-                <input type="text" name="ad" placeholder="Adınız Soyadınız" required>
+                <span data-i18n="form.ad">Ad Soyad</span>
+                <input type="text" name="ad" placeholder="Adınız Soyadınız" data-i18n-ph="form.adph" required>
               </label>
               <label class="form__field">
-                <span>Telefon</span>
+                <span data-i18n="form.tel">Telefon</span>
                 <input type="tel" name="telefon" placeholder="05xx xxx xx xx" required>
               </label>
             </div>
             <label class="form__field">
-              <span>E-posta</span>
+              <span data-i18n="form.ep">E-posta</span>
               <input type="email" name="eposta" placeholder="ornek@eposta.com" required>
             </label>
             <label class="form__field">
-              <span>İlgilendiğiniz Hizmet</span>
+              <span data-i18n="form.hizmet">İlgilendiğiniz Hizmet</span>
               <select name="hizmet">
-                <option>Akıllı Ev Sistemleri</option>
-                <option>Bina Otomasyonu</option>
-                <option>Güvenlik &amp; Kamera Sistemleri</option>
-                <option>Mobil Uygulama Geliştirme</option>
-                <option>Web Sitesi &amp; Yazılım</option>
-                <option>Diğer</option>
+                <option data-i18n="form.o1">Akıllı Ev Sistemleri</option>
+                <option data-i18n="form.o2">Bina Otomasyonu</option>
+                <option data-i18n="form.o3">Güvenlik &amp; Kamera Sistemleri</option>
+                <option data-i18n="form.o4">Mobil Uygulama Geliştirme</option>
+                <option data-i18n="form.o5">Web Sitesi &amp; Yazılım</option>
+                <option data-i18n="form.o6">Diğer</option>
               </select>
             </label>
             <label class="form__field">
-              <span>Mesajınız</span>
-              <textarea name="mesaj" rows="4" placeholder="Projenizden kısaca bahsedin..." required></textarea>
+              <span data-i18n="form.mesaj">Mesajınız</span>
+              <textarea name="mesaj" rows="4" placeholder="Projenizden kısaca bahsedin..." data-i18n-ph="form.mesajph" required></textarea>
             </label>
-            <button type="submit" class="btn btn--primary btn--full">Mesajı Gönder</button>
-            <p class="form__note" id="formNote" hidden>Teşekkürler! Mesajınız bize ulaştı, en kısa sürede dönüş yapacağız.</p>
+            <button type="submit" class="btn btn--primary btn--full" data-i18n="form.btn">Mesajı Gönder</button>
+            <p class="form__note" id="formNote" hidden data-i18n="form.note">Teşekkürler! Mesajınız bize ulaştı, en kısa sürede dönüş yapacağız.</p>
           </form>
         </div>
       </div>
@@ -553,27 +654,27 @@
           </svg>
           <span class="logo__text">MEKATRO<em>HOME</em></span>
         </a>
-        <p>Akıllı ev, bina otomasyonu ve yazılım çözümlerinde uçtan uca mühendislik.</p>
+        <p data-i18n="foot.desc">Akıllı ev, bina otomasyonu ve yazılım çözümlerinde uçtan uca mühendislik.</p>
       </div>
 
       <div class="footer__col">
-        <h4>Hizmetler</h4>
-        <a href="#hizmetler">Akıllı Ev Sistemleri</a>
-        <a href="#hizmetler">Bina Otomasyonu</a>
-        <a href="#hizmetler">Güvenlik Sistemleri</a>
-        <a href="#yazilim">Mobil Uygulama</a>
-        <a href="#yazilim">Web Sitesi &amp; Yazılım</a>
+        <h4 data-i18n="foot.h1">Hizmetler</h4>
+        <a href="#hizmetler" data-i18n="foot.l1">Akıllı Ev Sistemleri</a>
+        <a href="#hizmetler" data-i18n="foot.l2">Bina Otomasyonu</a>
+        <a href="#hizmetler" data-i18n="foot.l3">Güvenlik Sistemleri</a>
+        <a href="#yazilim" data-i18n="foot.l4">Mobil Uygulama</a>
+        <a href="#yazilim" data-i18n="foot.l5">Web Sitesi &amp; Yazılım</a>
       </div>
 
       <div class="footer__col">
-        <h4>Kurumsal</h4>
-        <a href="#neden-biz">Neden Biz</a>
-        <a href="#surec">Çalışma Sürecimiz</a>
-        <a href="#iletisim">İletişim</a>
+        <h4 data-i18n="foot.h2">Kurumsal</h4>
+        <a href="#neden-biz" data-i18n="foot.k1">Neden Biz</a>
+        <a href="#surec" data-i18n="foot.k2">Çalışma Sürecimiz</a>
+        <a href="#iletisim" data-i18n="foot.k3">İletişim</a>
       </div>
 
       <div class="footer__col">
-        <h4>İletişim</h4>
+        <h4 data-i18n="foot.h3">İletişim</h4>
         <a href="tel:+905401233536">+90 540 123 35 36</a>
         <a href="mailto:mekatrohome@gmail.com?subject=Mekatro%20Home%20-%20%C4%B0leti%C5%9Fim">mekatrohome@gmail.com</a>
         <a href="https://wa.me/905401233536" target="_blank" rel="noopener">WhatsApp</a>
@@ -581,11 +682,12 @@
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <span>© <span id="year"></span> MekatroHome Mühendislik. Tüm hakları saklıdır.</span>
+        <span>© <span id="year"></span> MekatroHome Mühendislik. <span data-i18n="foot.rights">Tüm hakları saklıdır.</span></span>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

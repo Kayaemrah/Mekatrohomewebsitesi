@@ -25,13 +25,21 @@ kontrol ederek yapılır; otomatik test yoktur.
 ## Yapı ve mimari
 
 - `index.html` — tüm bölümler tek sayfada, `#` çapa linkli navigasyon:
-  hero → hizmetler (`#hizmetler`) → mobil kontrol (`#mobil`) → yazılım (`#yazilim`)
-  → süreç (`#surec`) → neden biz (`#neden-biz`) → CTA bandı → iletişim (`#iletisim`) → footer.
+  hero → hizmetler (`#hizmetler`) → KNX (`#knx`, SMIL animasyonlu bus diyagramı)
+  → mobil kontrol (`#mobil`) → yazılım (`#yazilim`) → süreç (`#surec`)
+  → neden biz (`#neden-biz`) → CTA bandı → iletişim (`#iletisim`) → footer.
+- **Çok dillilik:** site TR/EN/DE/AR destekler. Kaynak metin HTML içinde Türkçedir;
+  çeviriler `js/i18n.js` içindeki sözlüklerde durur. Çevrilecek öğeler `data-i18n`
+  (metin) ve `data-i18n-ph` (placeholder) öznitelikleriyle işaretlenir. **Yeni metin
+  eklerken dört sözlüğe de aynı anahtarı ekleyin.** Arapça seçilince `<html dir="rtl">`
+  olur; RTL düzeltmeleri style.css sonundaki `[dir="rtl"]` bloğundadır. Seçim
+  `localStorage("mekatro-dil")` ile hatırlanır; dil menüsü header'dadır.
 - `css/style.css` — tek stil dosyası. Tema koyu ve tek temadır (light mod yok).
   Renk/font/radius değerleri `:root` içindeki CSS değişkenlerinde tanımlı
   (`--cyan`, `--indigo`, `--amber`, `--grad`, `--surface`...); yeni stiller bu
   değişkenleri kullanmalı. Sınıf adlandırması BEM benzeri (`blok__eleman--durum`).
-  Responsive kırılımlar: 1024px ve 720px. `prefers-reduced-motion` desteklenir.
+  Responsive kırılımlar: 1024px (mobil menü burada devreye girer) ve 720px.
+  `prefers-reduced-motion` desteklenir.
 - `js/main.js` — bağımlılıksız vanilla JS (IIFE): sticky header, mobil menü,
   `IntersectionObserver` ile `.reveal` scroll animasyonu ve `data-count` sayaçları.
   Yeni animasyonlu bölümlere `reveal` sınıfını eklemek yeterlidir.
@@ -50,9 +58,10 @@ Gerçek bilgiler (08.07.2026'da güncellendi):
   Başarılı gönderim sonrası `?gonderildi=1#iletisim` adresine dönülür ve `js/main.js`
   bu parametreyi görünce teşekkür notunu gösterir.
 
+- Adres: `Türkiye / Gaziantep` (13.07.2026'da güncellendi; dört dil sözlüğünde `il.c3v`)
+
 Hâlâ yer tutucu olanlar:
 
-- Adres: `Türkiye`
 - Hero istatistikleri: `data-count` değerleri (150 proje, 10 yıl)
 
 Bunlardan birini güncellerken index.html içinde TÜM geçtiği yerleri değiştirin
