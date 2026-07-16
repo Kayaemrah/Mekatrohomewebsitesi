@@ -16,8 +16,9 @@
       "hero.desc": "Akıllı ev sistemlerinden bina otomasyonuna, güvenlik çözümlerinden size özel mobil uygulama ve web yazılımlarına — keşiften devreye almaya kadar uçtan uca mühendislik hizmeti sunuyoruz.",
       "hero.cta1": "Ücretsiz Keşif Talep Edin", "hero.cta2": "Hizmetlerimizi İnceleyin",
       "hero.s1": "Tamamlanan Proje", "hero.s2": "Yıllık Deneyim", "hero.s3": "Müşteri Memnuniyeti",
-      "hero.f1s": "Salon · İklimlendirme", "hero.f2t": "Aydınlatma", "hero.f2s": "4 oda aktif · %60",
-      "hero.f3t": "Güvenlik", "hero.f3s": "Sistem devrede",
+      "hero.f1s": "Salon · İklimlendirme", "hero.f2t": "Aydınlatma", "hero.f2s": "4 oda aktif",
+      "hero.f3t": "Güvenlik", "hero.f3s": "Sistem devrede", "hero.f3off": "Sistem kapalı",
+      "code.file": "mekatro-app · akilli-ev.js",
       "hiz.tag": "Hizmetlerimiz", "hiz.t1": "Tek çatı altında", "hiz.t2": "akıllı çözümler",
       "hiz.desc": "Donanımdan yazılıma, projelendirmeden 7/24 desteğe kadar ihtiyacınız olan her şey tek bir mühendislik ekibinden.",
       "c1.t": "KNX Akıllı Ev Sistemleri",
@@ -114,8 +115,9 @@
       "hero.desc": "From smart home systems to building automation, from security solutions to custom mobile apps and web software — end-to-end engineering from survey to commissioning.",
       "hero.cta1": "Request a Free Survey", "hero.cta2": "Explore Our Services",
       "hero.s1": "Completed Projects", "hero.s2": "Years of Experience", "hero.s3": "Customer Satisfaction",
-      "hero.f1s": "Living Room · Climate", "hero.f2t": "Lighting", "hero.f2s": "4 rooms on · 60%",
-      "hero.f3t": "Security", "hero.f3s": "System armed",
+      "hero.f1s": "Living Room · Climate", "hero.f2t": "Lighting", "hero.f2s": "4 rooms on",
+      "hero.f3t": "Security", "hero.f3s": "System armed", "hero.f3off": "System off",
+      "code.file": "mekatro-app · smart-home.js",
       "hiz.tag": "Our Services", "hiz.t1": "Smart solutions", "hiz.t2": "under one roof",
       "hiz.desc": "Everything you need from a single engineering team — from hardware to software, from design to 24/7 support.",
       "c1.t": "KNX Smart Home Systems",
@@ -212,8 +214,9 @@
       "hero.desc": "Von Smart-Home-Systemen über Gebäudeautomation und Sicherheitslösungen bis zu maßgeschneiderten Apps und Websoftware — Engineering aus einer Hand, von der Planung bis zur Inbetriebnahme.",
       "hero.cta1": "Kostenlose Besichtigung anfragen", "hero.cta2": "Unsere Leistungen entdecken",
       "hero.s1": "Abgeschlossene Projekte", "hero.s2": "Jahre Erfahrung", "hero.s3": "Kundenzufriedenheit",
-      "hero.f1s": "Wohnzimmer · Klima", "hero.f2t": "Beleuchtung", "hero.f2s": "4 Räume aktiv · 60 %",
-      "hero.f3t": "Sicherheit", "hero.f3s": "System scharf",
+      "hero.f1s": "Wohnzimmer · Klima", "hero.f2t": "Beleuchtung", "hero.f2s": "4 Räume aktiv",
+      "hero.f3t": "Sicherheit", "hero.f3s": "System scharf", "hero.f3off": "System aus",
+      "code.file": "mekatro-app · smart-zuhause.js",
       "hiz.tag": "Unsere Leistungen", "hiz.t1": "Intelligente Lösungen", "hiz.t2": "unter einem Dach",
       "hiz.desc": "Alles, was Sie brauchen, aus einer Hand — von Hardware bis Software, von der Planung bis zum 24/7-Support.",
       "c1.t": "KNX-Smart-Home-Systeme",
@@ -310,8 +313,9 @@
       "hero.desc": "من أنظمة المنزل الذكي إلى أتمتة المباني، ومن الحلول الأمنية إلى تطبيقات الجوال وبرمجيات الويب المصممة خصيصًا لك — نقدم خدمة هندسية متكاملة من المعاينة حتى التشغيل.",
       "hero.cta1": "اطلب معاينة مجانية", "hero.cta2": "استعرض خدماتنا",
       "hero.s1": "مشروع منجز", "hero.s2": "سنوات من الخبرة", "hero.s3": "رضا العملاء",
-      "hero.f1s": "الصالة · التكييف", "hero.f2t": "الإضاءة", "hero.f2s": "4 غرف مفعّلة · %60",
-      "hero.f3t": "الأمان", "hero.f3s": "النظام مفعّل",
+      "hero.f1s": "الصالة · التكييف", "hero.f2t": "الإضاءة", "hero.f2s": "4 غرف مفعّلة",
+      "hero.f3t": "الأمان", "hero.f3s": "النظام مفعّل", "hero.f3off": "النظام متوقف",
+      "code.file": "mekatro-app · smart-home.js",
       "hiz.tag": "خدماتنا", "hiz.t1": "حلول ذكية", "hiz.t2": "تحت سقف واحد",
       "hiz.desc": "كل ما تحتاجه من فريق هندسي واحد — من الأجهزة إلى البرمجيات، ومن التصميم إلى الدعم على مدار الساعة.",
       "c1.t": "أنظمة المنزل الذكي KNX",
@@ -398,11 +402,36 @@
     }
   };
 
+
+  /* Kod penceresi içerikleri (dile göre) */
+  function cw(varn, cls, scenefn, scene, light, setf, blinds, closef, ac, temp, sec, arm, cm, run) {
+    return '<span class="c-kw">const</span> <span class="c-var">' + varn + '</span> = <span class="c-kw">new</span> <span class="c-fn">' + cls + '</span>(<span class="c-str">"Mekatro Home"</span>);\n\n' +
+      '<span class="c-var">' + varn + '</span>.<span class="c-fn">' + scenefn + '</span>(<span class="c-str">"' + scene + '"</span>, () =&gt; {\n' +
+      '  <span class="c-var">' + varn + '</span>.' + light + '.<span class="c-fn">' + setf + '</span>(<span class="c-num">60</span>);\n' +
+      '  <span class="c-var">' + varn + '</span>.' + blinds + '.<span class="c-fn">' + closef + '</span>();\n' +
+      '  <span class="c-var">' + varn + '</span>.' + ac + '.<span class="c-fn">' + temp + '</span>(<span class="c-num">22.5</span>);\n' +
+      '  <span class="c-var">' + varn + '</span>.' + sec + '.<span class="c-fn">' + arm + '</span>();\n' +
+      '});\n\n' +
+      '<span class="c-cm">// ' + cm + '</span>\n' +
+      '<span class="c-var">' + varn + '</span>.<span class="c-fn">' + run + '</span>(<span class="c-str">"' + scene + '"</span>);';
+  }
+  var CODE = {
+    tr: cw("ev", "AkilliEv", "senaryo", "aksam", "aydinlatma", "ayarla", "perdeler", "kapat", "klima", "sicaklik", "guvenlik", "aktifEt", "Tek dokunuşla tüm ev hazır ✨", "calistir"),
+    en: cw("home", "SmartHome", "scene", "evening", "lighting", "set", "blinds", "close", "ac", "temperature", "security", "arm", "The whole home ready in one tap ✨", "run"),
+    de: cw("haus", "SmartHome", "szene", "abend", "beleuchtung", "setzen", "jalousien", "schliessen", "klima", "temperatur", "sicherheit", "aktivieren", "Mit einem Tipp ist das ganze Haus bereit ✨", "starten"),
+    ar: cw("home", "SmartHome", "scene", "evening", "lighting", "set", "blinds", "close", "ac", "temperature", "security", "arm", "المنزل كله جاهز بلمسة واحدة ✨", "run")
+  };
+
+  var current = "tr";
   var DEFAULT_LANG = "tr";
 
   function applyLang(lang) {
     var dict = I18N[lang];
     if (!dict) return;
+    current = lang;
+
+    var codeEl = document.getElementById("codeSample");
+    if (codeEl && CODE[lang]) codeEl.innerHTML = CODE[lang];
 
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
@@ -428,6 +457,11 @@
 
     try { localStorage.setItem("mekatro-dil", lang); } catch (e) {}
   }
+
+  window.mekatroI18n = {
+    t: function (key) { var d = I18N[current] || I18N.tr; return d[key]; },
+    lang: function () { return current; }
+  };
 
   /* Açılır menü */
   var toggle = document.getElementById("langToggle");

@@ -85,6 +85,79 @@
     });
   }
 
+  /* Hero: etkileşimli akıllı ev demosu */
+  var house = document.getElementById("smartHouse");
+  if (house) {
+    var state = { light: true, fan: true, alarm: true, dim: 60 };
+    var lampGlow = document.getElementById("lampGlow");
+    var lampBulb = document.getElementById("lampBulb");
+    var alarmDome = document.getElementById("alarmDome");
+    var dimmer = document.getElementById("dimmer");
+    var dimVal = document.getElementById("dimVal");
+
+    function t(key, fallback) {
+      var v = window.mekatroI18n && window.mekatroI18n.t(key);
+      return v || fallback;
+    }
+    function setSwitch(cardId, on) {
+      var sw = document.querySelector("#" + cardId + " .switch");
+      if (sw) sw.classList.toggle("switch--on", on);
+      var card = document.getElementById(cardId);
+      if (card) card.setAttribute("aria-pressed", on ? "true" : "false");
+    }
+    function renderLight() {
+      house.classList.toggle("light-on", state.light);
+      if (lampGlow) lampGlow.style.opacity = state.light ? (0.25 + 0.75 * state.dim / 100) : 0;
+      if (lampBulb) lampBulb.setAttribute("fill", state.light ? "#fde68a" : "rgba(148,163,184,.4)");
+      if (dimVal) dimVal.textContent = "%" + state.dim;
+      setSwitch("cardLight", state.light);
+    }
+    function renderFan() {
+      house.classList.toggle("fan-on", state.fan);
+      setSwitch("cardClimate", state.fan);
+    }
+    function renderAlarm() {
+      house.classList.toggle("alarm-on", state.alarm);
+      if (alarmDome) alarmDome.setAttribute("fill", state.alarm ? "#ef4444" : "#64748b");
+      var lbl = document.getElementById("secLabel");
+      if (lbl) {
+        var key = state.alarm ? "hero.f3s" : "hero.f3off";
+        lbl.setAttribute("data-i18n", key);
+        lbl.textContent = t(key, state.alarm ? "Sistem devrede" : "Sistem kapalı");
+      }
+      var dot = document.querySelector("#cardSec .dot-live");
+      if (dot) {
+        dot.style.background = state.alarm ? "" : "rgba(148,163,184,.5)";
+        dot.style.animation = state.alarm ? "" : "none";
+        dot.style.boxShadow = state.alarm ? "" : "none";
+      }
+      var card = document.getElementById("cardSec");
+      if (card) card.setAttribute("aria-pressed", state.alarm ? "true" : "false");
+    }
+    function bindCard(id, handler) {
+      var card = document.getElementById(id);
+      if (!card) return;
+      card.addEventListener("click", function (e) {
+        if (e.target && e.target.tagName === "INPUT") return;
+        handler();
+      });
+      card.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); handler(); }
+      });
+    }
+    bindCard("cardLight", function () { state.light = !state.light; renderLight(); });
+    bindCard("cardClimate", function () { state.fan = !state.fan; renderFan(); });
+    bindCard("cardSec", function () { state.alarm = !state.alarm; renderAlarm(); });
+    if (dimmer) {
+      dimmer.addEventListener("input", function () {
+        state.dim = parseInt(dimmer.value, 10);
+        if (!state.light) state.light = true;
+        renderLight();
+      });
+    }
+    renderLight(); renderFan(); renderAlarm();
+  }
+
   /* Form gönderildiyse (FormSubmit ?gonderildi=1 ile geri yönlendirir) teşekkür notu göster */
   var note = document.getElementById("formNote");
   if (note && new URLSearchParams(window.location.search).has("gonderildi")) {
