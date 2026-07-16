@@ -43,8 +43,14 @@ kontrol ederek yapılır; otomatik test yoktur.
   Responsive kırılımlar: 1024px (mobil menü burada devreye girer) ve 720px.
   `prefers-reduced-motion` desteklenir.
 - `js/main.js` — bağımlılıksız vanilla JS (IIFE): sticky header, mobil menü,
-  `IntersectionObserver` ile `.reveal` scroll animasyonu ve `data-count` sayaçları.
+  `IntersectionObserver` ile `.reveal` scroll animasyonu, `data-count` sayaçları ve
+  hero'daki etkileşimli akıllı ev demosu (lamba+dimmer, klima fanı, alarm sireni —
+  `#smartHouse` üzerindeki `light-on/fan-on/alarm-on` sınıfları ve kartlardaki
+  id'lerle çalışır; metinler `window.mekatroI18n.t()` ile dilden gelir).
   Yeni animasyonlu bölümlere `reveal` sınıfını eklemek yeterlidir.
+- Yazılım bölümündeki kod penceresi (`#codeSample`) dile göre değişir: içerik
+  `js/i18n.js` içindeki `CODE` sözlüğünden innerHTML olarak basılır; dosya adı
+  `code.file` anahtarındadır.
 - Görseller: marka görselleri `assets/` altındadır — `logo.png` (tam logo, şeffaf),
   `logo-mark.png` (header/footer'daki M monogramı), `favicon.png`, `mekatrox.png`
   (Mekatrox Control uygulama ikonu, Ürünler bölümü). Geri kalan tüm görseller inline

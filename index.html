@@ -100,22 +100,54 @@
           </div>
         </div>
 
-        <!-- Akıllı ev illüstrasyonu -->
-        <div class="hero__visual reveal" aria-hidden="true">
-          <div class="smart-house">
-            <svg viewBox="0 0 420 360" fill="none" class="smart-house__svg">
+        <!-- Akıllı ev illüstrasyonu (etkileşimli demo) -->
+        <div class="hero__visual reveal">
+          <div class="smart-house light-on fan-on alarm-on" id="smartHouse">
+            <svg viewBox="0 0 420 360" fill="none" class="smart-house__svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="lampGlowGrad" cx="50%" cy="35%" r="65%">
+                  <stop offset="0%" stop-color="rgba(251,191,36,.5)"/>
+                  <stop offset="100%" stop-color="rgba(251,191,36,0)"/>
+                </radialGradient>
+              </defs>
               <!-- ev gövdesi -->
               <path d="M210 40L370 160V330H50V160L210 40Z" stroke="rgba(148,163,184,.35)" stroke-width="2" fill="rgba(15,23,42,.6)"/>
               <path d="M210 40L370 160H50L210 40Z" fill="rgba(34,211,238,.06)" stroke="rgba(34,211,238,.4)" stroke-width="2"/>
+              <!-- alarm sireni (çatı tepesi) -->
+              <g id="alarmGrp" transform="translate(210 32)">
+                <g id="alarmBeams">
+                  <path d="M0 -10 V-16" stroke="#f87171" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M0 10 V16" stroke="#f87171" stroke-width="2.5" stroke-linecap="round" opacity=".35"/>
+                  <path d="M10 0 H16" stroke="#f87171" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+                  <path d="M-10 0 H-16" stroke="#f87171" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+                </g>
+                <path id="alarmDome" d="M-6.5 4 A6.5 6.5 0 1 1 6.5 4 Z" fill="#ef4444"/>
+                <rect x="-9" y="4" width="18" height="3.5" rx="1.75" fill="rgba(148,163,184,.6)"/>
+              </g>
               <!-- kapı ve pencereler -->
               <rect x="180" y="240" width="60" height="90" rx="4" stroke="rgba(34,211,238,.5)" stroke-width="2" fill="rgba(34,211,238,.08)"/>
               <rect x="85" y="200" width="55" height="50" rx="4" stroke="rgba(129,140,248,.5)" stroke-width="2" fill="rgba(129,140,248,.1)" class="pulse-soft"/>
-              <rect x="280" y="200" width="55" height="50" rx="4" stroke="rgba(251,191,36,.5)" stroke-width="2" fill="rgba(251,191,36,.08)" class="pulse-soft delay-2"/>
+              <rect x="280" y="200" width="55" height="50" rx="4" stroke="rgba(251,191,36,.5)" stroke-width="2" fill="rgba(251,191,36,.08)"/>
+              <!-- tavan lambası -->
+              <g id="lampGrp">
+                <path d="M210 156 V170" stroke="rgba(148,163,184,.55)" stroke-width="2"/>
+                <path d="M198 176 A12 9 0 0 1 222 176 Z" fill="rgba(148,163,184,.35)"/>
+                <circle id="lampBulb" cx="210" cy="181" r="6" fill="#fde68a"/>
+                <ellipse id="lampGlow" cx="210" cy="207" rx="54" ry="32" fill="url(#lampGlowGrad)"/>
+              </g>
+              <!-- klima fanı (sağ pencere) -->
+              <g transform="translate(307 225)">
+                <g id="fanBlades">
+                  <ellipse cx="0" cy="-8" rx="3" ry="7.5" fill="#fbbf24" opacity=".9"/>
+                  <ellipse cx="0" cy="-8" rx="3" ry="7.5" fill="#fbbf24" opacity=".9" transform="rotate(120)"/>
+                  <ellipse cx="0" cy="-8" rx="3" ry="7.5" fill="#fbbf24" opacity=".9" transform="rotate(240)"/>
+                </g>
+                <circle r="3" fill="#fde68a"/>
+              </g>
               <!-- bağlantı hatları -->
               <path d="M210 130V70" stroke="rgba(34,211,238,.6)" stroke-width="2" stroke-dasharray="4 6" class="dash-anim"/>
               <circle cx="210" cy="130" r="6" fill="#22d3ee" class="pulse-node"/>
               <circle cx="112" cy="225" r="5" fill="#818cf8" class="pulse-node delay-1"/>
-              <circle cx="307" cy="225" r="5" fill="#fbbf24" class="pulse-node delay-2"/>
               <circle cx="210" cy="285" r="5" fill="#22d3ee" class="pulse-node delay-3"/>
               <path d="M210 130L112 225M210 130L307 225M210 130L210 285" stroke="rgba(34,211,238,.25)" stroke-width="1.5"/>
               <!-- wifi -->
@@ -124,20 +156,24 @@
               <circle cx="210" cy="82" r="3.5" fill="#22d3ee"/>
             </svg>
 
-            <!-- yüzen kontrol kartları -->
-            <div class="float-card float-card--1">
+            <!-- yüzen kontrol kartları (tıklanabilir) -->
+            <div class="float-card float-card--1 float-card--btn" id="cardClimate" role="button" tabindex="0" aria-pressed="true" aria-label="Klimayı aç/kapat">
               <span class="float-card__icon">🌡️</span>
               <div><strong>22.5°C</strong><small data-i18n="hero.f1s">Salon · İklimlendirme</small></div>
               <span class="switch switch--on" aria-hidden="true"></span>
             </div>
-            <div class="float-card float-card--2">
+            <div class="float-card float-card--2 float-card--btn" id="cardLight" role="button" tabindex="0" aria-pressed="true" aria-label="Aydınlatmayı aç/kapat">
               <span class="float-card__icon">💡</span>
-              <div><strong data-i18n="hero.f2t">Aydınlatma</strong><small data-i18n="hero.f2s">4 oda aktif · %60</small></div>
+              <div>
+                <strong data-i18n="hero.f2t">Aydınlatma</strong>
+                <small><span data-i18n="hero.f2s">4 oda aktif</span> · <span id="dimVal">%60</span></small>
+                <input type="range" id="dimmer" min="10" max="100" value="60" aria-label="Parlaklık (dimmer)">
+              </div>
               <span class="switch switch--on" aria-hidden="true"></span>
             </div>
-            <div class="float-card float-card--3">
+            <div class="float-card float-card--3 float-card--btn" id="cardSec" role="button" tabindex="0" aria-pressed="true" aria-label="Alarmı devreye al/kapat">
               <span class="float-card__icon">🛡️</span>
-              <div><strong data-i18n="hero.f3t">Güvenlik</strong><small data-i18n="hero.f3s">Sistem devrede</small></div>
+              <div><strong data-i18n="hero.f3t">Güvenlik</strong><small data-i18n="hero.f3s" id="secLabel">Sistem devrede</small></div>
               <span class="dot-live" aria-hidden="true"></span>
             </div>
           </div>
@@ -492,8 +528,8 @@
 
         <div class="split__visual reveal" aria-hidden="true">
           <div class="code-window">
-            <div class="code-window__bar"><i></i><i></i><i></i><span>mekatro-app · akilli-ev.js</span></div>
-            <pre class="code-window__body"><code><span class="c-kw">const</span> <span class="c-var">ev</span> = <span class="c-kw">new</span> <span class="c-fn">AkilliEv</span>(<span class="c-str">"Mekatro Home"</span>);
+            <div class="code-window__bar"><i></i><i></i><i></i><span data-i18n="code.file">mekatro-app · akilli-ev.js</span></div>
+            <pre class="code-window__body"><code id="codeSample"><span class="c-kw">const</span> <span class="c-var">ev</span> = <span class="c-kw">new</span> <span class="c-fn">AkilliEv</span>(<span class="c-str">"Mekatro Home"</span>);
 
 <span class="c-var">ev</span>.<span class="c-fn">senaryo</span>(<span class="c-str">"aksam"</span>, () =&gt; {
   <span class="c-var">ev</span>.aydinlatma.<span class="c-fn">ayarla</span>(<span class="c-num">60</span>);

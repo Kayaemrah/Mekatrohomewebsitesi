@@ -934,3 +934,29 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.85rem;
   font-weight: 600;
 }
+
+/* ---------- Hero etkileşimli demo ---------- */
+@keyframes spin { to { transform: rotate(360deg); } }
+
+#fanBlades, #alarmBeams {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.smart-house.fan-on #fanBlades { animation: spin 0.9s linear infinite; }
+.smart-house:not(.fan-on) #fanBlades ellipse { fill: rgba(148, 163, 184, 0.5); }
+.smart-house.alarm-on #alarmBeams { animation: spin 1.4s linear infinite; }
+.smart-house:not(.alarm-on) #alarmBeams { opacity: 0; }
+#lampGlow { transition: opacity 0.35s ease; }
+#alarmBeams { transition: opacity 0.3s ease; }
+
+.float-card--btn { cursor: pointer; user-select: none; -webkit-user-select: none; }
+.float-card--btn:hover { border-color: rgba(34, 211, 238, 0.45); }
+.float-card--btn:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+
+.float-card input[type="range"] {
+  display: block;
+  width: 110px;
+  margin-top: 8px;
+  accent-color: var(--cyan);
+  cursor: pointer;
+}
