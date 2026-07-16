@@ -960,3 +960,5 @@ a { color: inherit; text-decoration: none; }
   accent-color: var(--cyan);
   cursor: pointer;
 }
+
+.form__hint { color: var(--text-muted); font-size: 0.78rem; text-align: center; }

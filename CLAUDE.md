@@ -64,6 +64,8 @@ Gerçek bilgiler (08.07.2026'da güncellendi):
 - Telefon: `+90 540 123 35 36` — linklerde `tel:+905401233536` ve `wa.me/905401233536`
 - E-posta: `mekatrohome@gmail.com` (mailto: linkleri, footer)
 - İletişim formu FormSubmit ile çalışır (`action="https://formsubmit.co/mekatrohome@gmail.com"`).
+  Robot doğrulaması açıktır (`_captcha=true` — FormSubmit gönderim sonrası reCAPTCHA
+  sayfası gösterir); ek koruma olarak gizli `_honey` tuzak alanı vardır.
   İlk gönderimde FormSubmit e-postaya bir aktivasyon maili yollar; onaylanması gerekir.
   Başarılı gönderim sonrası `?gonderildi=1#iletisim` adresine dönülür ve `js/main.js`
   bu parametreyi görünce teşekkür notunu gösterir.
