@@ -799,8 +799,27 @@ a { color: inherit; text-decoration: none; }
   .mini-cards { grid-template-columns: 1fr; }
   .footer__inner { grid-template-columns: 1fr; gap: 28px; }
   .cta-band__inner { padding: 36px 28px; }
-  .float-card--1 { right: 0; }
-  .float-card--2 { left: 0; }
+
+  /* Hero demosu: kartlar üst üste binmesin — ev üstte, kartlar altında dizili */
+  .smart-house {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .smart-house__svg {
+    max-width: 300px;
+    margin: 0 auto;
+    order: -1;
+  }
+  .float-card {
+    position: static;
+    inset: auto;
+    width: 100%;
+    max-width: 360px;
+    animation: none;
+    transform: none;
+  }
 }
 
 /* ---------- Header sağ grup + dil seçici ---------- */
