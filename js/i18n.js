@@ -484,10 +484,13 @@
     });
   }
 
-  /* Kayıtlı dili yükle */
+  /* Dili yükle — öncelik: URL (?lang=) > localStorage > varsayılan */
+  var urlLang = null;
+  try { urlLang = new URLSearchParams(window.location.search).get("lang"); } catch (e) {}
   var saved = null;
   try { saved = localStorage.getItem("mekatro-dil"); } catch (e) {}
-  if (saved && saved !== DEFAULT_LANG && I18N[saved]) {
-    applyLang(saved);
+  var initial = (urlLang && I18N[urlLang]) ? urlLang : (saved && I18N[saved] ? saved : DEFAULT_LANG);
+  if (initial !== DEFAULT_LANG) {
+    applyLang(initial);
   }
 })();

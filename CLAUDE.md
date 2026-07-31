@@ -79,6 +79,20 @@ Hâlâ yer tutucu olanlar:
 Bunlardan birini güncellerken index.html içinde TÜM geçtiği yerleri değiştirin
 (her biri birden fazla yerde geçer).
 
+## SEO ve yapay zeka görünürlüğü
+
+- `index.html` `<head>` içinde: canonical, dört dil için `hreflang`, Open Graph +
+  Twitter kartı (`assets/og-image.png`, 1200×630) ve **JSON-LD yapılandırılmış veri**
+  (`@graph`: Organization/LocalBusiness, WebSite, SoftwareApplication=Mekatrox,
+  Service+OfferCatalog, FAQPage). JSON-LD, Google zengin sonuçları ve AI Overviews /
+  yapay zeka özetleri için okunan asıl kaynaktır — hizmet, ürün veya iletişim bilgisi
+  değişince buradaki şemayı da güncelleyin.
+- `sitemap.xml` ve `robots.txt` kök dizindedir; robots yapay zeka botlarına (GPTBot,
+  OAI-SearchBot, PerplexityBot, Google-Extended) açıktır ve sitemap'i işaret eder.
+- Dil seçimi `?lang=en|de|ar` URL parametresiyle de yüklenir (hreflang uyumu);
+  `js/i18n.js` sonunda öncelik: URL > localStorage > varsayılan (tr).
+- `assets/og-image.png` PIL ile üretildi; marka/başlık değişirse yeniden üretilmeli.
+
 ## Yayınlama
 
 - `.github/workflows/deploy-pages.yml` — geliştirme dalına her push'ta site
