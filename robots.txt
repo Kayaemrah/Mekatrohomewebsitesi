@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Yapay zeka / arama motoru botlarına açık
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.mekatrohome.com/sitemap.xml
