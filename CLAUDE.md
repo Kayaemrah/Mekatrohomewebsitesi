@@ -26,7 +26,8 @@ kontrol ederek yapılır; otomatik test yoktur.
 
 - `index.html` — tüm bölümler tek sayfada, `#` çapa linkli navigasyon:
   hero → hizmetler (`#hizmetler`) → KNX (`#knx`, SMIL animasyonlu bus diyagramı)
-  → ürünler (`#urunler`, Mekatrox Control tanıtımı) → mobil kontrol (`#mobil`)
+  → ürünler (`#urunler`, 4 ürün kartı: Mekatrox Control, MKT Player IPTV,
+  Dijital KPSS, YDS Kelime Ustası) → mobil kontrol (`#mobil`)
   → yazılım (`#yazilim`) → süreç (`#surec`) → neden biz (`#neden-biz`)
   → CTA bandı → iletişim (`#iletisim`) → footer. Bölüm arka planları
   `section--alt` ile dönüşümlüdür; araya bölüm eklerken sırayı koruyun.
@@ -52,8 +53,9 @@ kontrol ederek yapılır; otomatik test yoktur.
   `js/i18n.js` içindeki `CODE` sözlüğünden innerHTML olarak basılır; dosya adı
   `code.file` anahtarındadır.
 - Görseller: marka görselleri `assets/` altındadır — `logo.png` (tam logo, şeffaf),
-  `logo-mark.png` (header/footer'daki M monogramı), `favicon.png`, `mekatrox.png`
-  (Mekatrox Control uygulama ikonu, Ürünler bölümü). Geri kalan tüm görseller inline
+  `logo-mark.png` (header/footer'daki M monogramı), `favicon.png`, `og-image.png`,
+  `mekatrox.png`, `mktplayer.png`, `dijitalkpss.png`, `yds.png` (Ürünler bölümü
+  uygulama ikonları). Geri kalan tüm görseller inline
   SVG veya saf CSS'tir (hero evi, KNX diyagramı, telefon mockup'ı, kod penceresi).
   Harici görsel/CDN eklemekten kaçının (fontlar hariç — Google Fonts: Inter + Space Grotesk).
 

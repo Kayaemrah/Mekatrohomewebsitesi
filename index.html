@@ -85,6 +85,33 @@
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
       },
       {
+        "@type": "SoftwareApplication",
+        "name": "MKT Player",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "LG webOS, Android, Windows",
+        "description": "Mekatro Home tarafından geliştirilen IPTV oynatıcı yazılımı. Canlı yayın, film ve dizileri modern arayüzle izlemeyi sağlar; LG televizyon, Android ve Windows PC üzerinde çalışır.",
+        "publisher": { "@id": "https://www.mekatrohome.com/#kurulus" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
+      },
+      {
+        "@type": "MobileApplication",
+        "name": "Dijital KPSS",
+        "applicationCategory": "EducationApplication",
+        "operatingSystem": "Android",
+        "description": "Mekatro Home tarafından geliştirilen KPSS sınavına hazırlık uygulaması. Güncel sorular, denemeler ve akıllı çalışma araçları sunar. Google Play üzerinde yayındadır.",
+        "publisher": { "@id": "https://www.mekatrohome.com/#kurulus" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
+      },
+      {
+        "@type": "MobileApplication",
+        "name": "YDS Kelime Ustası",
+        "applicationCategory": "EducationApplication",
+        "operatingSystem": "Android",
+        "description": "Mekatro Home tarafından geliştirilen YDS kelime ve okuma uygulaması. Kelime dağarcığını güçlendirir ve okuma pratiği sunar. Google Play üzerinde yayındadır.",
+        "publisher": { "@id": "https://www.mekatrohome.com/#kurulus" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
+      },
+      {
         "@type": "Service",
         "serviceType": "KNX Akıllı Ev ve Bina Otomasyonu",
         "provider": { "@id": "https://www.mekatrohome.com/#kurulus" },
@@ -119,6 +146,11 @@
             "@type": "Question",
             "name": "Mekatrox Control yazılımı nedir?",
             "acceptedAnswer": { "@type": "Answer", "text": "Mekatrox Control, Mekatro Home tarafından KNX sistemleri için geliştirilen kontrol yazılımıdır. Windows bilgisayar ve Android telefonlarda çalışır; aydınlatma, perde, iklimlendirme, güvenlik ve senaryoları tek arayüzden gerçek zamanlı yönetir." }
+          },
+          {
+            "@type": "Question",
+            "name": "MKT Player nedir ve hangi cihazlarda çalışır?",
+            "acceptedAnswer": { "@type": "Answer", "text": "MKT Player, Mekatro Home tarafından geliştirilen IPTV oynatıcı yazılımıdır. Canlı yayın, film ve dizileri modern bir arayüzle izlemenizi sağlar; LG televizyon (webOS), Android cihazlar ve Windows bilgisayarlarda çalışır." }
           },
           {
             "@type": "Question",
@@ -497,44 +529,77 @@
 
     <!-- ============ ÜRÜNLER ============ -->
     <section class="section" id="urunler">
-      <div class="container split">
-        <div class="split__visual reveal">
-          <div class="product-panel">
-            <img src="assets/mekatrox.png" alt="Mekatrox Control uygulama ikonu" class="product-panel__icon">
-            <div class="product-panel__name">
-              <strong>Mekatrox Control</strong>
-              <span data-i18n="pro.sub">KNX Kontrol Yazılımı</span>
-            </div>
-            <div class="product-panel__badges">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag" data-i18n="pro.tag">Ürünlerimiz</span>
+          <h2 class="section__title"><span data-i18n="pro.t1">Kendi geliştirdiğimiz</span> <span class="text-gradient" data-i18n="pro.t2">yazılımlar</span></h2>
+          <p class="section__desc" data-i18n="pro.desc">
+            Mühendislik deneyimimizi kendi ürünlerimize taşıyoruz: KNX kontrolünden
+            IPTV yayınına kadar, birden fazla platformda çalışan kendi yazılımlarımız.
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card reveal">
+            <img src="assets/mekatrox.png" alt="Mekatrox Control uygulama ikonu" class="product-card__icon">
+            <h3 class="product-card__name">Mekatrox Control</h3>
+            <span class="product-card__sub" data-i18n="pro.sub">KNX Kontrol Yazılımı</span>
+            <p class="product-card__desc" data-i18n="pro.mx.desc">
+              KNX sistemleri için geliştirdiğimiz kontrol yazılımı. Aydınlatma, perde,
+              iklimlendirme, güvenlik ve senaryoları tek arayüzden gerçek zamanlı yönetin.
+            </p>
+            <div class="product-card__badges">
               <span class="pill">💻 Windows PC</span>
               <span class="pill">🤖 Android</span>
             </div>
-          </div>
-        </div>
+            <a href="#iletisim" class="btn btn--primary btn--full" data-i18n="pro.cta">Mekatrox Demosu İsteyin</a>
+          </article>
 
-        <div class="split__content reveal">
-          <span class="section__tag" data-i18n="pro.tag">Ürünlerimiz</span>
-          <h2 class="section__title"><span data-i18n="pro.t1">Kendi yazılımımız:</span> <span class="text-gradient">Mekatrox</span></h2>
-          <p class="section__desc" data-i18n="pro.desc">
-            Mekatrox, KNX sistemleri için kendi geliştirdiğimiz kontrol yazılımıdır.
-            Evinizi veya binanızı hem Windows bilgisayarınızdan hem de Android
-            telefonunuzdan tek arayüzle yönetin.
-          </p>
-          <ul class="feature-list">
-            <li>
-              <strong data-i18n="pro.f1t">Gerçek zamanlı KNX kontrolü</strong>
-              <span data-i18n="pro.f1d">Aydınlatma, perde, iklimlendirme, güvenlik ve senaryolar tek ekranda.</span>
-            </li>
-            <li>
-              <strong data-i18n="pro.f2t">PC ve Android'de çalışır</strong>
-              <span data-i18n="pro.f2d">Windows bilgisayarlar için masaüstü, Android cihazlar için mobil uygulama.</span>
-            </li>
-            <li>
-              <strong data-i18n="pro.f3t">Mekânınıza özel arayüz</strong>
-              <span data-i18n="pro.f3d">Paneller, odalarınıza ve senaryolarınıza göre size özel tasarlanır.</span>
-            </li>
-          </ul>
-          <a href="#iletisim" class="btn btn--primary" data-i18n="pro.cta">Mekatrox Demosu İsteyin</a>
+          <article class="product-card reveal">
+            <img src="assets/mktplayer.png" alt="MKT Player IPTV uygulama ikonu" class="product-card__icon">
+            <h3 class="product-card__name">MKT Player</h3>
+            <span class="product-card__sub" data-i18n="pro.iptv.sub">IPTV Player Yazılımı</span>
+            <p class="product-card__desc" data-i18n="pro.iptv.desc">
+              Kendi geliştirdiğimiz IPTV oynatıcı yazılımı. Canlı yayın, film ve dizileri
+              akıcı ve modern arayüzle izleyin; LG televizyon, Android ve Windows'ta çalışır.
+            </p>
+            <div class="product-card__badges">
+              <span class="pill">📺 LG TV</span>
+              <span class="pill">🤖 Android</span>
+              <span class="pill">💻 Windows PC</span>
+            </div>
+            <a href="#iletisim" class="btn btn--primary btn--full" data-i18n="pro.iptv.cta">MKT Player Hakkında Bilgi Alın</a>
+          </article>
+
+          <article class="product-card reveal">
+            <img src="assets/dijitalkpss.png" alt="Dijital KPSS uygulama ikonu" class="product-card__icon">
+            <h3 class="product-card__name">Dijital KPSS</h3>
+            <span class="product-card__sub" data-i18n="pro.kpss.sub">KPSS Hazırlık Uygulaması</span>
+            <p class="product-card__desc" data-i18n="pro.kpss.desc">
+              KPSS'ye hazırlananlar için geliştirdiğimiz mobil uygulama. Güncel sorular,
+              denemeler ve akıllı çalışma araçlarıyla doğru hedefe odaklanın.
+            </p>
+            <div class="product-card__badges">
+              <span class="pill">▶️ Google Play</span>
+              <span class="pill">🤖 Android</span>
+            </div>
+            <a href="https://play.google.com/store/search?q=Dijital%20KPSS&c=apps" target="_blank" rel="noopener" class="btn btn--primary btn--full" data-i18n="pro.play">Google Play'de İncele</a>
+          </article>
+
+          <article class="product-card reveal">
+            <img src="assets/yds.png" alt="YDS Kelime Ustası uygulama ikonu" class="product-card__icon">
+            <h3 class="product-card__name">YDS Kelime Ustası</h3>
+            <span class="product-card__sub" data-i18n="pro.yds.sub">YDS Kelime &amp; Okuma Uygulaması</span>
+            <p class="product-card__desc" data-i18n="pro.yds.desc">
+              YDS'ye hazırlananlar için kelime ve okuma uygulaması. Kelime dağarcığınızı
+              güçlendirin, okuma pratiğiyle sınavda öne geçin.
+            </p>
+            <div class="product-card__badges">
+              <span class="pill">▶️ Google Play</span>
+              <span class="pill">🤖 Android</span>
+            </div>
+            <a href="https://play.google.com/store/search?q=YDS%20Kelime%20Ustas%C4%B1&c=apps" target="_blank" rel="noopener" class="btn btn--primary btn--full" data-i18n="pro.play">Google Play'de İncele</a>
+          </article>
         </div>
       </div>
     </section>
