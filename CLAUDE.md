@@ -6,8 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Mekatro Home Mühendislik'in kurumsal web sitesi: akıllı ev sistemleri (KNX), bina
 otomasyonu, güvenlik/kamera sistemleri ile mobil uygulama ve web yazılımı hizmetlerini
-tanıtan **tek sayfalık, tamamen statik** bir site. Build aracı, paket yöneticisi, test
-veya lint altyapısı yoktur — düz HTML/CSS/JS.
+tanıtan **hibrit çok sayfalı, tamamen statik** bir site (ana sayfa + Ürünler,
+Hakkımızda, İletişim sayfaları). Build aracı, paket yöneticisi, test veya lint
+altyapısı yoktur — düz HTML/CSS/JS.
 
 Tüm içerik **Türkçe**dir; yeni içerik ve commit mesajları da Türkçe yazılmalıdır.
 
@@ -24,7 +25,16 @@ kontrol ederek yapılır; otomatik test yoktur.
 
 ## Yapı ve mimari
 
-- `index.html` — tüm bölümler tek sayfada, `#` çapa linkli navigasyon:
+**Hibrit çok sayfalı yapı:** Ana sayfa (`index.html`) tek-akış özettir; ayrıca
+`urunler.html`, `hakkimizda.html`, `iletisim.html` ayrı tam sayfalardır. Header ve
+footer her sayfada tekrarlanır (build aracı yok) — menü/footer değişikliğini DÖRT
+HTML dosyasına da uygulayın. İç sayfa menüsünde ana sayfa bölümleri `index.html#...`
+ile, ana sayfada aynı bölümler saf `#...` ile linklenir (ana sayfada kaydırma akıcı
+kalsın diye). Her sayfa kendi `<title>`, `meta description`, `canonical`, OG etiketi
+ve BreadcrumbList JSON-LD'sine sahiptir; `<html data-title-key/data-desc-key>` ile
+dile göre başlık/açıklama i18n'den güncellenir (`js/i18n.js`).
+
+- `index.html` — ana sayfa, `#` çapa linkli navigasyon:
   hero → hizmetler (`#hizmetler`) → KNX (`#knx`, SMIL animasyonlu bus diyagramı)
   → ürünler (`#urunler`, 4 ürün kartı: Mekatrox Control, MKT Player IPTV,
   Dijital KPSS, YDS Kelime Ustası) → mobil kontrol (`#mobil`)
