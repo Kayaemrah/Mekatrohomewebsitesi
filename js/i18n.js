@@ -48,6 +48,18 @@
       "knx.dev1": "Akıllı Buton", "knx.dev2": "Hareket Sensörü", "knx.dev3": "Termostat", "knx.dev4": "Panjur Motoru",
       "knx.status": "Bus hattı aktif · cihazlar haberleşiyor",
       "nav.urunler": "Ürünler",
+      "nav.hakkimizda": "Hakkımızda",
+      "urun.metaTitle": "Ürünlerimiz | Mekatrox, MKT Player, Dijital KPSS, YDS — Mekatro Home",
+      "urun.metaDesc": "Mekatro Home'un geliştirdiği yazılımlar: Mekatrox KNX kontrol yazılımı, MKT Player IPTV oynatıcı, Dijital KPSS ve YDS Kelime Ustası eğitim uygulamaları.",
+      "urun.lead": "KNX kontrolünden IPTV yayınına, eğitim uygulamalarına kadar kendi geliştirdiğimiz, birden fazla platformda çalışan yazılımlar.",
+      "hak.metaTitle": "Hakkımızda | Mekatro Home Mühendislik — Gaziantep",
+      "hak.metaDesc": "Mekatro Home Mühendislik; Gaziantep merkezli KNX akıllı ev, bina otomasyonu, güvenlik ve yazılım çözümlerinde uçtan uca mühendislik sunar.",
+      "hak.tag": "Hakkımızda", "hak.t1": "Mühendislik disiplini,", "hak.t2": "insan odaklı hizmet.",
+      "hak.lead": "Mekatro Home Mühendislik; akıllı ev, bina otomasyonu ve yazılımı tek çatı altında buluşturan bir mühendislik firmasıdır.",
+      "hak.p1": "Gaziantep merkezli ekibimiz, KNX sertifikalı mühendislik altyapısıyla konut ve ticari projelerde aydınlatma, iklimlendirme, güvenlik ve enerji yönetimini tek sistemde toplar. Keşiften devreye almaya, bakımdan 7/24 desteğe kadar sürecin tamamını üstleniriz.",
+      "hak.p2": "Donanımın yanında yazılımı da kendimiz geliştiririz: KNX kontrol yazılımımız Mekatrox, IPTV oynatıcımız MKT Player ve Google Play'deki eğitim uygulamalarımız bu vizyonun ürünüdür. Amacımız, teknolojiyi yaşam alanlarında sade ve güvenilir biçimde kullanılır kılmaktır.",
+      "il.metaTitle": "İletişim | Mekatro Home Mühendislik — Gaziantep",
+      "il.metaDesc": "Mekatro Home ile iletişime geçin: telefon +90 540 123 35 36, e-posta mekatrohome@gmail.com, Gaziantep. Ücretsiz keşif ve teklif için formu doldurun.",
       "pro.tag": "Ürünlerimiz", "pro.t1": "Kendi geliştirdiğimiz", "pro.t2": "yazılımlar",
       "pro.desc": "Mühendislik deneyimimizi kendi ürünlerimize taşıyoruz: KNX kontrolünden IPTV yayınına, eğitim uygulamalarına kadar birden fazla platformda çalışan kendi yazılımlarımız.",
       "pro.sub": "KNX Kontrol Yazılımı",
@@ -154,6 +166,18 @@
       "knx.dev1": "Smart Switch", "knx.dev2": "Motion Sensor", "knx.dev3": "Thermostat", "knx.dev4": "Blind Actuator",
       "knx.status": "Bus active · devices communicating",
       "nav.urunler": "Products",
+      "nav.hakkimizda": "About",
+      "urun.metaTitle": "Our Products | Mekatrox, MKT Player, Dijital KPSS, YDS — Mekatro Home",
+      "urun.metaDesc": "Software built by Mekatro Home: Mekatrox KNX control software, MKT Player IPTV player, Dijital KPSS and YDS Kelime Ustası education apps.",
+      "urun.lead": "From KNX control and IPTV streaming to education apps — software we build ourselves that runs across multiple platforms.",
+      "hak.metaTitle": "About | Mekatro Home Engineering — Gaziantep",
+      "hak.metaDesc": "Mekatro Home Engineering delivers end-to-end engineering in KNX smart home, building automation, security and software, based in Gaziantep, Türkiye.",
+      "hak.tag": "About Us", "hak.t1": "Engineering discipline,", "hak.t2": "human-focused service.",
+      "hak.lead": "Mekatro Home Engineering brings smart home, building automation and software together under one roof.",
+      "hak.p1": "Based in Gaziantep, our KNX-certified engineering team unifies lighting, climate, security and energy management into a single system for residential and commercial projects. We handle the whole process — from survey to commissioning, from maintenance to 24/7 support.",
+      "hak.p2": "Beyond hardware, we build our own software: our Mekatrox KNX control software, our MKT Player IPTV player and our education apps on Google Play are products of this vision. Our goal is to make technology simple and dependable in everyday living spaces.",
+      "il.metaTitle": "Contact | Mekatro Home Engineering — Gaziantep",
+      "il.metaDesc": "Get in touch with Mekatro Home: phone +90 540 123 35 36, email mekatrohome@gmail.com, Gaziantep. Fill in the form for a free survey and quote.",
       "pro.tag": "Our Products", "pro.t1": "The software", "pro.t2": "we build ourselves",
       "pro.desc": "We bring our engineering experience into our own products: from KNX control and IPTV streaming to education apps — software we build that runs across multiple platforms.",
       "pro.sub": "KNX Control Software",
@@ -260,6 +284,18 @@
       "knx.dev1": "Smarter Taster", "knx.dev2": "Bewegungsmelder", "knx.dev3": "Thermostat", "knx.dev4": "Jalousieaktor",
       "knx.status": "Bus aktiv · Geräte kommunizieren",
       "nav.urunler": "Produkte",
+      "nav.hakkimizda": "Über uns",
+      "urun.metaTitle": "Unsere Produkte | Mekatrox, MKT Player, Dijital KPSS, YDS — Mekatro Home",
+      "urun.metaDesc": "Von Mekatro Home entwickelte Software: Mekatrox KNX-Steuerung, MKT Player IPTV-Player, Dijital KPSS und YDS Kelime Ustası Lern-Apps.",
+      "urun.lead": "Von KNX-Steuerung über IPTV-Streaming bis zu Lern-Apps — selbst entwickelte Software, die auf mehreren Plattformen läuft.",
+      "hak.metaTitle": "Über uns | Mekatro Home Engineering — Gaziantep",
+      "hak.metaDesc": "Mekatro Home Engineering bietet Engineering aus einer Hand für KNX-Smart-Home, Gebäudeautomation, Sicherheit und Software — mit Sitz in Gaziantep.",
+      "hak.tag": "Über uns", "hak.t1": "Ingenieursdisziplin,", "hak.t2": "menschzentrierter Service.",
+      "hak.lead": "Mekatro Home Engineering vereint Smart Home, Gebäudeautomation und Software unter einem Dach.",
+      "hak.p1": "Unser KNX-zertifiziertes Team mit Sitz in Gaziantep vereint Beleuchtung, Klima, Sicherheit und Energiemanagement in einem einzigen System für Wohn- und Gewerbeprojekte. Wir übernehmen den gesamten Prozess — von der Besichtigung bis zur Inbetriebnahme, von der Wartung bis zum 24/7-Support.",
+      "hak.p2": "Neben der Hardware entwickeln wir auch eigene Software: unsere KNX-Steuerung Mekatrox, unser IPTV-Player MKT Player und unsere Lern-Apps bei Google Play sind Produkte dieser Vision. Unser Ziel ist es, Technik im Alltag einfach und zuverlässig nutzbar zu machen.",
+      "il.metaTitle": "Kontakt | Mekatro Home Engineering — Gaziantep",
+      "il.metaDesc": "Kontaktieren Sie Mekatro Home: Telefon +90 540 123 35 36, E-Mail mekatrohome@gmail.com, Gaziantep. Füllen Sie das Formular für Besichtigung und Angebot aus.",
       "pro.tag": "Unsere Produkte", "pro.t1": "Software, die wir", "pro.t2": "selbst entwickeln",
       "pro.desc": "Wir bringen unsere Ingenieurserfahrung in eigene Produkte: von KNX-Steuerung über IPTV-Streaming bis zu Lern-Apps — Software, die auf mehreren Plattformen läuft.",
       "pro.sub": "KNX-Steuerungssoftware",
@@ -366,6 +402,18 @@
       "knx.dev1": "مفتاح ذكي", "knx.dev2": "حساس حركة", "knx.dev3": "منظم حرارة", "knx.dev4": "محرك ستائر",
       "knx.status": "الناقل نشط · الأجهزة تتواصل",
       "nav.urunler": "منتجاتنا",
+      "nav.hakkimizda": "من نحن",
+      "urun.metaTitle": "منتجاتنا | مكاتروكس، MKT Player، Dijital KPSS، YDS — مكاترو هوم",
+      "urun.metaDesc": "برمجيات طورتها مكاترو هوم: برنامج التحكم مكاتروكس KNX، مشغّل MKT Player IPTV، وتطبيقا Dijital KPSS وYDS Kelime Ustası التعليميان.",
+      "urun.lead": "من التحكم بأنظمة KNX وبث IPTV إلى التطبيقات التعليمية — برمجيات نطوّرها بأنفسنا وتعمل على منصات متعددة.",
+      "hak.metaTitle": "من نحن | مكاترو هوم للهندسة — غازي عنتاب",
+      "hak.metaDesc": "تقدّم مكاترو هوم للهندسة خدمة هندسية متكاملة في المنزل الذكي KNX وأتمتة المباني والأمان والبرمجيات، ومقرها غازي عنتاب.",
+      "hak.tag": "من نحن", "hak.t1": "انضباط هندسي،", "hak.t2": "وخدمة محورها الإنسان.",
+      "hak.lead": "تجمع مكاترو هوم للهندسة بين المنزل الذكي وأتمتة المباني والبرمجيات تحت سقف واحد.",
+      "hak.p1": "فريقنا المعتمد من KNX ومقرّه غازي عنتاب يوحّد الإضاءة والتكييف والأمان وإدارة الطاقة في نظام واحد للمشاريع السكنية والتجارية. نتولّى العملية كاملة — من المعاينة إلى التشغيل، ومن الصيانة إلى الدعم على مدار الساعة.",
+      "hak.p2": "إلى جانب الأجهزة نطوّر برمجياتنا الخاصة: برنامج التحكم مكاتروكس KNX، ومشغّل MKT Player IPTV، وتطبيقاتنا التعليمية على Google Play هي ثمرة هذه الرؤية. هدفنا جعل التقنية بسيطة وموثوقة في مساحات الحياة اليومية.",
+      "il.metaTitle": "اتصل بنا | مكاترو هوم للهندسة — غازي عنتاب",
+      "il.metaDesc": "تواصل مع مكاترو هوم: هاتف ‎+90 540 123 35 36، بريد mekatrohome@gmail.com، غازي عنتاب. املأ النموذج لمعاينة وعرض سعر مجانيين.",
       "pro.tag": "منتجاتنا", "pro.t1": "برمجيات", "pro.t2": "نطوّرها بأنفسنا",
       "pro.desc": "ننقل خبرتنا الهندسية إلى منتجاتنا الخاصة: من التحكم بأنظمة KNX وبث IPTV إلى تطبيقات تعليمية، برمجيات نطوّرها وتعمل على منصات متعددة.",
       "pro.sub": "برنامج التحكم KNX",
@@ -473,9 +521,12 @@
       if (dict[key] !== undefined) el.setAttribute("placeholder", dict[key]);
     });
 
-    document.title = dict["meta.title"];
+    // Sayfa başlığı/açıklaması — her sayfa <html data-title-key/data-desc-key> ile kendi anahtarını belirtir
+    var tKey = document.documentElement.getAttribute("data-title-key") || "meta.title";
+    var dKey = document.documentElement.getAttribute("data-desc-key") || "meta.desc";
+    document.title = dict[tKey] || dict["meta.title"];
     var meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", dict["meta.desc"]);
+    if (meta) meta.setAttribute("content", dict[dKey] || dict["meta.desc"]);
 
     var cur = document.getElementById("langCurrent");
     if (cur) cur.textContent = lang.toUpperCase();
