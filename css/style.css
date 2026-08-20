@@ -1030,3 +1030,7 @@ a { color: inherit; text-decoration: none; }
   .section--first { padding-top: 112px; }
   .about-stats { gap: 32px; }
 }
+
+/* Ürün kartında birden fazla mağaza butonu */
+.product-card__stores { display: grid; gap: 8px; width: 100%; margin-top: auto; }
+.product-card__stores .btn { margin-top: 0; }
