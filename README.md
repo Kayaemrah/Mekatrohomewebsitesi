@@ -18,7 +18,9 @@ assets/favicon.svg  Site simgesi
   dosyaları yükleyerek yayınlanabilir; sunucu tarafı gerektirmez.
 - **Mobil uyumlu** — telefon, tablet ve masaüstünde sorunsuz görünüm.
 - **Koyu, teknoloji odaklı tasarım** — akıllı ev/otomasyon sektörüne uygun premium görünüm.
-- **SEO hazır** — meta açıklama, Open Graph etiketleri, anlamlı başlık yapısı.
+- **SEO hazır** — meta açıklama, Open Graph etiketleri, anlamlı başlık yapısı,
+  JSON-LD yapılandırılmış veri ve "Gaziantep akıllı ev / Gaziantep KNX" odaklı
+  yerel SEO içeriği.
 - **Bölümler:** Hero (animasyonlu akıllı ev görseli) · Hizmetler · Mobil Kontrol ·
   Yazılım & Dijital · Çalışma Süreci · Neden Biz · İletişim formu · Footer
 
@@ -30,8 +32,10 @@ Telefon (`+90 540 123 35 36`) ve e-posta (`mekatrohome@gmail.com`) günceldir.
 
 | Yer tutucu | Nerede |
 |---|---|
-| `Türkiye` (adres) | İletişim bölümündeki adres kartı |
-| Hero istatistikleri (150+ proje, 10+ yıl) | `data-count` değerleri |
+| Hero istatistiği (10+ yıl) | `data-count` değeri |
+
+(Adres `Türkiye / Gaziantep` olarak güncellendi; "150+ tamamlanan proje"
+istatistiği doğrulanamadığı için kaldırıldı.)
 
 ## Yerelde görüntüleme
 

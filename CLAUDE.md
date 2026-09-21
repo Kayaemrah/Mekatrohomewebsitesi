@@ -86,7 +86,10 @@ Gerçek bilgiler (08.07.2026'da güncellendi):
 
 Hâlâ yer tutucu olanlar:
 
-- Hero istatistikleri: `data-count` değerleri (150 proje, 10 yıl)
+- Hero istatistiği: `data-count="10"` (10+ yıl deneyim). "150+ tamamlanan proje"
+  istatistiği doğrulanamadığı için 21.09.2026'da hem `index.html` hero'sundan hem de
+  `hakkimizda.html` içindeki `.about-stats` bloğundan kaldırıldı (`hero.s1` anahtarı da
+  dört sözlükten silindi).
 
 Bunlardan birini güncellerken index.html içinde TÜM geçtiği yerleri değiştirin
 (her biri birden fazla yerde geçer).
@@ -104,6 +107,24 @@ Bunlardan birini güncellerken index.html içinde TÜM geçtiği yerleri değiş
 - Dil seçimi `?lang=en|de|ar` URL parametresiyle de yüklenir (hreflang uyumu);
   `js/i18n.js` sonunda öncelik: URL > localStorage > varsayılan (tr).
 - `assets/og-image.png` PIL ile üretildi; marka/başlık değişirse yeniden üretilmeli.
+
+### Yerel SEO (Gaziantep) odağı
+
+Hedef anahtar kelimeler: **gaziantep knx**, **gaziantep knx firmaları**,
+**gaziantep akıllı ev**, **gaziantep akıllı ev firmaları**. Bu nedenle:
+
+- Dört sayfanın da `<title>` ve `meta description` değerleri şehir adını başa alır;
+  aynı metinler `js/i18n.js` içindeki `meta.title/meta.desc`, `hak.meta*`, `il.meta*`
+  anahtarlarında dört dil için tekrarlanır — birini değiştirirken diğerini de güncelleyin.
+- Ana sayfa `<h1>` üç satırdır (`hero.t1` + `hero.t2` + `hero.t3`) ve şehir + hizmet
+  eşleşmesini taşır; `hiz.t1`, `hiz.desc`, `knx.desc`, `foot.desc`, `foot.l1` de
+  Gaziantep bağlamı içerir.
+- JSON-LD'de `LocalBusiness.areaServed` Gaziantep ilçelerini (Şahinbey, Şehitkamil,
+  Oğuzeli, Nizip) listeler, `address.addressLocality` Gaziantep'tir ve `FAQPage`
+  şeması Gaziantep'e özel üç soru içerir. Hizmet bölgesi değişirse bu üç yeri de
+  (areaServed, address, SSS metinleri) birlikte güncelleyin.
+- Yeni içerik eklerken anahtar kelimeyi zorlamayın; şehir adı doğal geçtiği yerlerde
+  kullanılmalı, aynı cümlede tekrarlanmamalıdır.
 
 ## Yayınlama
 
