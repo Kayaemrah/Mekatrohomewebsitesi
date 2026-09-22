@@ -23,6 +23,8 @@ assets/favicon.svg  Site simgesi
   yerel SEO içeriği.
 - **Bölümler:** Hero (animasyonlu akıllı ev görseli) · Hizmetler · Mobil Kontrol ·
   Yazılım & Dijital · Çalışma Süreci · Neden Biz · İletişim formu · Footer
+- **Sayfalar:** `index.html` · `gaziantep-akilli-ev.html` (yerel SEO iniş sayfası) ·
+  `urunler.html` · `hakkimizda.html` · `iletisim.html`
 
 ## İletişim bilgileri
 

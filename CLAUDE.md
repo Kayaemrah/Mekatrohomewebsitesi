@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Mekatro Home Mühendislik'in kurumsal web sitesi: akıllı ev sistemleri (KNX), bina
 otomasyonu, güvenlik/kamera sistemleri ile mobil uygulama ve web yazılımı hizmetlerini
 tanıtan **hibrit çok sayfalı, tamamen statik** bir site (ana sayfa + Ürünler,
-Hakkımızda, İletişim sayfaları). Build aracı, paket yöneticisi, test veya lint
+Hakkımızda, İletişim ve Gaziantep Akıllı Ev sayfaları). Build aracı, paket yöneticisi, test veya lint
 altyapısı yoktur — düz HTML/CSS/JS.
 
 Tüm içerik **Türkçe**dir; yeni içerik ve commit mesajları da Türkçe yazılmalıdır.
@@ -26,9 +26,9 @@ kontrol ederek yapılır; otomatik test yoktur.
 ## Yapı ve mimari
 
 **Hibrit çok sayfalı yapı:** Ana sayfa (`index.html`) tek-akış özettir; ayrıca
-`urunler.html`, `hakkimizda.html`, `iletisim.html` ayrı tam sayfalardır. Header ve
-footer her sayfada tekrarlanır (build aracı yok) — menü/footer değişikliğini DÖRT
-HTML dosyasına da uygulayın. İç sayfa menüsünde ana sayfa bölümleri `index.html#...`
+`urunler.html`, `hakkimizda.html`, `iletisim.html` ve `gaziantep-akilli-ev.html`
+ayrı tam sayfalardır. Header ve footer her sayfada tekrarlanır (build aracı yok) —
+menü/footer değişikliğini BEŞ HTML dosyasına da uygulayın. İç sayfa menüsünde ana sayfa bölümleri `index.html#...`
 ile, ana sayfada aynı bölümler saf `#...` ile linklenir (ana sayfada kaydırma akıcı
 kalsın diye). Her sayfa kendi `<title>`, `meta description`, `canonical`, OG etiketi
 ve BreadcrumbList JSON-LD'sine sahiptir; `<html data-title-key/data-desc-key>` ile
@@ -125,6 +125,30 @@ Hedef anahtar kelimeler: **gaziantep knx**, **gaziantep knx firmaları**,
   (areaServed, address, SSS metinleri) birlikte güncelleyin.
 - Yeni içerik eklerken anahtar kelimeyi zorlamayın; şehir adı doğal geçtiği yerlerde
   kullanılmalı, aynı cümlede tekrarlanmamalıdır.
+
+#### `gaziantep-akilli-ev.html` (yerel iniş sayfası)
+
+21.09.2026'da eklendi. Hedefi "gaziantep akıllı ev sistemleri / servisi",
+"gaziantep knx servisi", "gaziantep interra servisi", "gaziantep hager servisi"
+aramalarıdır; bu ifadeler sayfadaki **altı hizmet kartının `<h3>` başlıklarında**
+birebir geçer (`gae.k1t`–`gae.k6t`). Sayfa yapısı: giriş → hizmet kartları →
+hizmet bölgeleri (9 ilçe) → süreç (`sur.*` anahtarlarını yeniden kullanır, yeni
+anahtar yok) → görünür SSS (`feature-list` ile) → CTA bandı (`cta.*`).
+
+- Metinler `js/i18n.js` içinde **`gae.` önekli 41 anahtarda** dört dilde durur.
+- Sitedeki tek `<h1>` bu sayfadadır (diğer sayfalar `section__title` sınıflı `h2`
+  kullanır); `section__title` bir sınıf olduğu için `h1` ile de aynı görünür.
+- JSON-LD'si üç düğümlüdür: BreadcrumbList + Service (9 ilçe `areaServed` +
+  OfferCatalog) + FAQPage. **SSS şeması sayfadaki görünür SSS metinleriyle birebir
+  aynı olmalıdır** — Google, görünmeyen içeriğe dayalı SSS şemasını cezalandırır.
+  Soru/cevap değiştirirken hem HTML'i hem `gae.q*`/`gae.a*` anahtarlarını hem
+  JSON-LD'yi birlikte güncelleyin.
+- Sayfaya iç bağlantılar: beş sayfanın footer'ındaki `foot.l1` bağlantısı ve ana
+  sayfadaki hizmetler bölümünde `hiz.gaeLink` butonu. Yeni sayfa eklerken
+  `sitemap.xml`'e hreflang'leriyle birlikte girmeyi unutmayın.
+- Interra ve Hager metinleri "kurulum ve servis veriyoruz" der; **"yetkili servis"
+  ibaresi bilinçli olarak kullanılmamıştır.** Firma yetkili bayi/servis olduğunu
+  belgeleyene kadar bu ifade eklenmemelidir.
 
 ## Yayınlama
 
