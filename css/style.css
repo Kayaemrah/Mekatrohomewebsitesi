@@ -351,6 +351,8 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+/* Son satırda tek başına kalan kartı ortala (ör. 7 kartlı ızgara) */
+.cards-grid > .card:last-child:nth-child(3n + 1) { grid-column: 2; }
 
 .card {
   background: var(--surface);
@@ -783,6 +785,12 @@ a { color: inherit; text-decoration: none; }
   .hero__inner { grid-template-columns: 1fr; gap: 64px; }
   .hero__visual { max-width: 520px; margin-inline: auto; width: 100%; }
   .cards-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .cards-grid > .card:last-child:nth-child(3n + 1) { grid-column: auto; }
+  .cards-grid > .card:last-child:nth-child(2n + 1) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 12px);
+    justify-self: center;
+  }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .split { grid-template-columns: 1fr; gap: 48px; }
   .split--reverse .split__content { order: 0; }
@@ -795,6 +803,12 @@ a { color: inherit; text-decoration: none; }
   .hero__stats { gap: 28px; }
   .section { padding: 68px 0; }
   .cards-grid, .why-grid, .steps { grid-template-columns: 1fr; }
+  .cards-grid > .card:last-child:nth-child(2n + 1),
+  .cards-grid > .card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
+    max-width: none;
+    justify-self: stretch;
+  }
   .products-grid { grid-template-columns: 1fr; max-width: 400px; }
   .form__row { grid-template-columns: 1fr; }
   .mini-cards { grid-template-columns: 1fr; }

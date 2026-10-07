@@ -128,27 +128,37 @@ Hedef anahtar kelimeler: **gaziantep knx**, **gaziantep knx firmaları**,
 
 #### `gaziantep-akilli-ev.html` (yerel iniş sayfası)
 
-21.09.2026'da eklendi. Hedefi "gaziantep akıllı ev sistemleri / servisi",
-"gaziantep knx servisi", "gaziantep interra servisi", "gaziantep hager servisi"
-aramalarıdır; bu ifadeler sayfadaki **altı hizmet kartının `<h3>` başlıklarında**
-birebir geçer (`gae.k1t`–`gae.k6t`). Sayfa yapısı: giriş → hizmet kartları →
+21.09.2026'da eklendi, 07.10.2026'da Astrum kartı eklendi. Hedefi
+"gaziantep akıllı ev sistemleri / servisi", "gaziantep knx servisi",
+"gaziantep interra servisi", "gaziantep hager servisi",
+"gaziantep astrum ekran servisi" aramalarıdır; bu ifadeler sayfadaki
+**yedi hizmet kartının `<h3>` başlıklarında** birebir geçer
+(`gae.k1t`–`gae.k5t`, `gae.k7t` marka/hizmet kartları; `gae.k6t` retrofit). Sayfa yapısı: giriş → hizmet kartları →
 hizmet bölgeleri (9 ilçe) → süreç (`sur.*` anahtarlarını yeniden kullanır, yeni
 anahtar yok) → görünür SSS (`feature-list` ile) → CTA bandı (`cta.*`).
 
-- Metinler `js/i18n.js` içinde **`gae.` önekli 41 anahtarda** dört dilde durur.
+- Metinler `js/i18n.js` içinde **`gae.` önekli 45 anahtarda** dört dilde durur.
+- Kart sayısı 7 olduğu için `.cards-grid` son satırda tek kart bırakır; bunu
+  ortalayan kurallar `css/style.css` içindedir (3 sütunda `grid-column: 2`,
+  1024px'de yarım genişlikte ortalama, 720px'de sıfırlama). **720px kuralı
+  1024px kuralıyla aynı özgüllükte yazılmalıdır**, aksi halde onu geçemez.
+  Kart sayısı 6 veya 9'a çıkarsa bu kurallar kendiliğinden devre dışı kalır.
 - Sitedeki tek `<h1>` bu sayfadadır (diğer sayfalar `section__title` sınıflı `h2`
   kullanır); `section__title` bir sınıf olduğu için `h1` ile de aynı görünür.
 - JSON-LD'si üç düğümlüdür: BreadcrumbList + Service (9 ilçe `areaServed` +
   OfferCatalog) + FAQPage. **SSS şeması sayfadaki görünür SSS metinleriyle birebir
   aynı olmalıdır** — Google, görünmeyen içeriğe dayalı SSS şemasını cezalandırır.
   Soru/cevap değiştirirken hem HTML'i hem `gae.q*`/`gae.a*` anahtarlarını hem
-  JSON-LD'yi birlikte güncelleyin.
+  JSON-LD'yi birlikte güncelleyin. (07.10.2026'da `gae.q2` metni bu üç yerde
+  farklıydı, birleştirildi.) Eşleşmeyi doğrulayan kontrol: görünür
+  `<strong data-i18n="gae.q*">` / `<span data-i18n="gae.a*">` metinleri ile
+  FAQPage düğümündeki `name` / `acceptedAnswer.text` değerleri sırasıyla aynı olmalı.
 - Sayfaya iç bağlantılar: beş sayfanın footer'ındaki `foot.l1` bağlantısı ve ana
   sayfadaki hizmetler bölümünde `hiz.gaeLink` butonu. Yeni sayfa eklerken
   `sitemap.xml`'e hreflang'leriyle birlikte girmeyi unutmayın.
-- Interra ve Hager metinleri "kurulum ve servis veriyoruz" der; **"yetkili servis"
-  ibaresi bilinçli olarak kullanılmamıştır.** Firma yetkili bayi/servis olduğunu
-  belgeleyene kadar bu ifade eklenmemelidir.
+- Interra, Hager ve Astrum metinleri "kurulum ve servis veriyoruz" der;
+  **"yetkili servis" ibaresi bilinçli olarak kullanılmamıştır.** Firma yetkili
+  bayi/servis olduğunu belgeleyene kadar bu ifade eklenmemelidir.
 
 ## Yayınlama
 
