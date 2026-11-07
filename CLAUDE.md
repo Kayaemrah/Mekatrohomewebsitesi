@@ -177,11 +177,17 @@ indirme butonları → altı özellik kartı → görünür SSS → CTA bandı.
   `ip.note` ve `ip.a4` açıkça "hiçbir kanal, yayın veya içerik sağlamaz ve satmaz"
   der. Bu ifadeleri kaldırmayın: hem doğru hem de mağaza politikaları açısından
   gereklidir. Yayın/içerik vaat eden metin EKLEMEYİN.
-- **Mağaza linkleri:** Google Play (`com.mktplayer.app`) ve Microsoft Store
-  (`9N3M96JFS29B`) canlı butonlardır. App Store ve LG Content Store adresleri
-  elimizde olmadığı için buton yerine `ip.dlOther` metniyle "mağazada aratın"
-  denir; `ip.dlIos` anahtarı hazır bekliyor — gerçek App Store adresi gelince
-  `.store-links` içine bir `<a>` eklemek yeterli.
+- **Mağaza linkleri** (üçü de canlı buton; hem bu sayfada hem `index.html` ve
+  `urunler.html` ürün kartlarında, ayrıca her iki sayfanın JSON-LD `sameAs`
+  dizisinde):
+  - Google Play — `https://play.google.com/store/apps/details?id=com.mktplayer.app`
+  - App Store — `https://apps.apple.com/app/id6804966662` (uygulama mağazadaki
+    adıyla "MKT IPTV PLAYER"). **Ülke kodu bilerek konulmadı**: kodsuz adres
+    ziyaretçiyi kendi ülke mağazasına yönlendirir, `/us/` ise Türkiye'deki
+    kullanıcıya "bu ülkede yok" hatası verebilir.
+  - Microsoft Store — `https://apps.microsoft.com/detail/9N3M96JFS29B`
+  LG Content Store'un doğrudan adresi elimizde yok; `ip.dlOther` metni
+  televizyonda arama yapmayı anlatır.
 - `.store-links` ve `.store-note` stilleri `css/style.css` içinde, `.about-text`
   tanımının hemen üstündedir.
 - "Ücretsiz" ve "reklamsız" iddiaları firmanın beyanına dayanır. `app-ads.txt`
