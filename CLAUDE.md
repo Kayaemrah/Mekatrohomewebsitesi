@@ -83,6 +83,18 @@ Gerçek bilgiler (08.07.2026'da güncellendi):
   bu parametreyi görünce teşekkür notunu gösterir.
 
 - Adres: `Türkiye / Gaziantep` (13.07.2026'da güncellendi; dört dil sözlüğünde `il.c3v`)
+- **Google Business Profile** (07.11.2026'da doğrulandı): işletme adı `MEKATROHOME`,
+  kanonik adres `https://maps.google.com/?cid=17825801940152132003`. Bu adres
+  `index.html` içindeki LocalBusiness düğümünde `sameAs` ve `hasMap` olarak
+  kayıtlıdır. (Kısa link biçimi: `https://maps.app.goo.gl/x8NDBNTfgYhx3WnB9`.)
+- **AÇIK KONU — NAP tutarsızlığı:** Business Profile'da açık adres yayında —
+  `Binevler Mah., 81046. Sk. No:28, 27070 Şahinbey / Gaziantep`. Sitede ise hem
+  görünür adres (`il.c3v`) hem JSON-LD `PostalAddress` yalnızca il düzeyinde.
+  Yerel sıralamada site ile profilin adres bilgisinin birebir aynı olması
+  (NAP tutarlılığı) güçlü bir sinyaldir. Açık adresin siteye yazılması firmanın
+  kararına bağlıdır; onay gelirse `il.c3v` (dört dil) ve `PostalAddress`
+  (`streetAddress`, `postalCode`, `addressLocality: Şahinbey`) birlikte
+  güncellenmelidir.
 
 Hâlâ yer tutucu olanlar:
 
