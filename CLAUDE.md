@@ -186,13 +186,18 @@ indirme butonları → altı özellik kartı → görünür SSS → CTA bandı.
     ziyaretçiyi kendi ülke mağazasına yönlendirir, `/us/` ise Türkiye'deki
     kullanıcıya "bu ülkede yok" hatası verebilir.
   - Microsoft Store — `https://apps.microsoft.com/detail/9N3M96JFS29B`
-  LG Content Store'un doğrudan adresi elimizde yok; `ip.dlOther` metni
-  televizyonda arama yapmayı anlatır.
+  **LG / webOS bilerek yok:** 07.11.2026'da firma LG sürümünün henüz
+  olmadığını bildirdi; siteden tüm LG ve webOS ifadeleri kaldırıldı (başlık,
+  meta, anahtar kelimeler, `operatingSystem`, `featureList`, ürün kartı rozeti,
+  `ip.f5t` "Üç Platform", `ip.lead`, `ip.a2`, `ip.a5`, `pro.iptv.desc`).
+  LG sürümü yayına girerse bu alanların hepsine birlikte geri eklenmelidir.
+  `ip.dlOther` artık mağaza yerine kurulum desteği için iletişim adresi verir.
 - `.store-links` ve `.store-note` stilleri `css/style.css` içinde, `.about-text`
   tanımının hemen üstündedir.
-- "Ücretsiz" ve "reklamsız" iddiaları firmanın beyanına dayanır. `app-ads.txt`
-  bir AdMob yayıncı kimliği içerdiği için, MKT Player'a reklam eklenirse bu
-  sayfadaki `ip.f2t`/`ip.f2d` ve `ip.ctad` metinleri düzeltilmelidir.
+- "Ücretsiz" ve "reklamsız" iddialarını firma 07.11.2026'da teyit etti.
+  `app-ads.txt`'teki AdMob yayıncı kimliği diğer uygulamalar içindir; MKT
+  Player'a ileride reklam eklenirse `ip.f2t`/`ip.f2d` ve `ip.ctad` metinleri
+  düzeltilmelidir.
 
 ## Yayınlama
 
