@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Mekatro Home Mühendislik'in kurumsal web sitesi: akıllı ev sistemleri (KNX), bina
 otomasyonu, güvenlik/kamera sistemleri ile mobil uygulama ve web yazılımı hizmetlerini
 tanıtan **hibrit çok sayfalı, tamamen statik** bir site (ana sayfa + Ürünler,
-Hakkımızda, İletişim ve Gaziantep Akıllı Ev sayfaları). Build aracı, paket yöneticisi, test veya lint
+Hakkımızda, İletişim, Gaziantep Akıllı Ev ve IPTV Player sayfaları). Build aracı, paket yöneticisi, test veya lint
 altyapısı yoktur — düz HTML/CSS/JS.
 
 Tüm içerik **Türkçe**dir; yeni içerik ve commit mesajları da Türkçe yazılmalıdır.
@@ -26,9 +26,9 @@ kontrol ederek yapılır; otomatik test yoktur.
 ## Yapı ve mimari
 
 **Hibrit çok sayfalı yapı:** Ana sayfa (`index.html`) tek-akış özettir; ayrıca
-`urunler.html`, `hakkimizda.html`, `iletisim.html` ve `gaziantep-akilli-ev.html`
-ayrı tam sayfalardır. Header ve footer her sayfada tekrarlanır (build aracı yok) —
-menü/footer değişikliğini BEŞ HTML dosyasına da uygulayın. İç sayfa menüsünde ana sayfa bölümleri `index.html#...`
+`urunler.html`, `hakkimizda.html`, `iletisim.html`, `gaziantep-akilli-ev.html` ve
+`iptv-player.html` ayrı tam sayfalardır. Header ve footer her sayfada tekrarlanır
+(build aracı yok) — menü/footer değişikliğini ALTI HTML dosyasına da uygulayın. İç sayfa menüsünde ana sayfa bölümleri `index.html#...`
 ile, ana sayfada aynı bölümler saf `#...` ile linklenir (ana sayfada kaydırma akıcı
 kalsın diye). Her sayfa kendi `<title>`, `meta description`, `canonical`, OG etiketi
 ve BreadcrumbList JSON-LD'sine sahiptir; `<html data-title-key/data-desc-key>` ile
@@ -159,6 +159,34 @@ anahtar yok) → görünür SSS (`feature-list` ile) → CTA bandı (`cta.*`).
 - Interra, Hager ve Astrum metinleri "kurulum ve servis veriyoruz" der;
   **"yetkili servis" ibaresi bilinçli olarak kullanılmamıştır.** Firma yetkili
   bayi/servis olduğunu belgeleyene kadar bu ifade eklenmemelidir.
+
+#### `iptv-player.html` (MKT Player iniş sayfası)
+
+07.11.2026'da eklendi. Hedefi "iptv player", "ücretsiz iptv player",
+"reklamsız iptv player", "m3u player", "android/ios/windows iptv player",
+"lg tv iptv player", "xtream codes player" aramalarıdır. Sayfa yapısı: giriş +
+indirme butonları → altı özellik kartı → görünür SSS → CTA bandı.
+
+- Metinler `js/i18n.js` içinde **`ip.` önekli 43 anahtarda** dört dilde durur;
+  ayrıca `foot.l4` (eskiden kullanılmayan "Mobil Uygulama") bu sayfanın footer
+  bağlantısı olarak yeniden kullanıldı ve `pro.iptv.more` eklendi.
+- JSON-LD: BreadcrumbList + SoftwareApplication (`featureList`, `offers` price 0,
+  `operatingSystem` dört platform) + FAQPage. **SSS şeması görünür SSS ile birebir
+  aynı olmalı** — `gaziantep-akilli-ev.html` ile aynı kural ve aynı kontrol.
+- **İçerik politikası:** sayfa MKT Player'ı yalnızca bir OYNATICI olarak anlatır.
+  `ip.note` ve `ip.a4` açıkça "hiçbir kanal, yayın veya içerik sağlamaz ve satmaz"
+  der. Bu ifadeleri kaldırmayın: hem doğru hem de mağaza politikaları açısından
+  gereklidir. Yayın/içerik vaat eden metin EKLEMEYİN.
+- **Mağaza linkleri:** Google Play (`com.mktplayer.app`) ve Microsoft Store
+  (`9N3M96JFS29B`) canlı butonlardır. App Store ve LG Content Store adresleri
+  elimizde olmadığı için buton yerine `ip.dlOther` metniyle "mağazada aratın"
+  denir; `ip.dlIos` anahtarı hazır bekliyor — gerçek App Store adresi gelince
+  `.store-links` içine bir `<a>` eklemek yeterli.
+- `.store-links` ve `.store-note` stilleri `css/style.css` içinde, `.about-text`
+  tanımının hemen üstündedir.
+- "Ücretsiz" ve "reklamsız" iddiaları firmanın beyanına dayanır. `app-ads.txt`
+  bir AdMob yayıncı kimliği içerdiği için, MKT Player'a reklam eklenirse bu
+  sayfadaki `ip.f2t`/`ip.f2d` ve `ip.ctad` metinleri düzeltilmelidir.
 
 ## Yayınlama
 
